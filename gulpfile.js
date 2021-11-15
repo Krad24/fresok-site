@@ -12,16 +12,13 @@ function browsersync() {
     browserSync.init({
         server: {
             baseDir: 'app/'
-        }
-        //notify: false
+        },
+        notify: false
     })
 }
 
 function styles() {
-    return src([
-        'node_modules/slick-carousel/slick/slick.scss',
-        'app/scss/style.scss']
-    )
+    return src('app/scss/style.scss')
         .pipe(scss({
             outputStyle: 'compressed'
         }))
