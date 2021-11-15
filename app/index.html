@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <header class="header">
             <div class="header-top">
@@ -45,18 +44,16 @@
                 <div class="container">
                     <div class="header-bottom__inner">
                         <a class="logo header-bottom__logo" href="#">
-                            <img class="logo__img" src="images/logo.svg" alt="логотип">
+                            <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="60">
                         </a>
-                        <div class="header-bottom__catalog">
-                            <button class="header-bottom__btn">
-                                <svg class="header-bottom__icon" width="26" height="17" viewBox="0 0 26 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.917007" width="24.8963" height="1" fill="#63A60E" />
-                                    <rect x="0.917007" y="8" width="19.917" height="1" fill="#63A60E" />
-                                    <rect x="0.917007" y="16" width="24.8963" height="1" fill="#63A60E" />
-                                </svg>
-                                <span>Каталог продуктов</span>
-                            </button>
+                        <button class="header-bottom__btn" type="button">
+                            <svg class="header-bottom__icon" width="26" height="17" viewBox="0 0 26 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.917007" width="24.8963" height="1" fill="#63A60E" />
+                                <rect x="0.917007" y="8" width="19.917" height="1" fill="#63A60E" />
+                                <rect x="0.917007" y="16" width="24.8963" height="1" fill="#63A60E" />
+                            </svg>
+                            <span>Каталог продуктов</span>
                             <!-- <ul class="header-bottom__list">
                                 <li class="header-bottom__item">
                                     <a class="header-bottom__link" href="#">Овощи и фрукты</a>
@@ -95,25 +92,31 @@
                                     <a class="header-bottom__link" href="#">Чай, кофе</a>
                                 </li>
                             </ul> -->
-
-                        </div>
+                        </button>
                         <form class="header-bottom__search">
-                            <img class="header-bottom__search-img" src="images/icon/search.svg" width="24" height="24" alt="поиск">
-                            <input class="header-bottom__input" type="text" name="search-input"
+                            <label class="header-bottom__label" for="search">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.02081 16.4718C4.47604 16.4718 0.778625 12.7772 0.778625 8.23588C0.778625 3.69459 4.47604 0 9.02081 0C13.5656 0 17.263 3.69459 17.263 8.23588C17.263 12.7772 13.5656 16.4718 9.02081 16.4718ZM9.02081 1.5613C5.33761 1.5613 2.34112 4.5555 2.34112 8.23588C2.34112 11.9163 5.33761 14.9105 9.02081 14.9105C12.704 14.9105 15.7005 11.9163 15.7005 8.23588C15.7005 4.5555 12.704 1.5613 9.02081 1.5613ZM20.5498 19.7713C20.8549 19.4665 20.8549 18.9722 20.5498 18.6673L17.0537 15.1739C16.7486 14.869 16.2539 14.869 15.9488 15.1739C15.6438 15.4788 15.6438 15.9731 15.9488 16.2779L19.4449 19.7713C19.5975 19.9238 19.7974 20 19.9974 20C20.1974 20 20.3972 19.9238 20.5498 19.7713Z"
+                                        fill="#31352B" />
+                                </svg>
+                                <span class="sr-only">поле для поиска</span>
+                            </label>
+                            <input class="header-bottom__input" id="search" type="text" name="search"
                                 placeholder="Найти в магазине ..." required>
                             <button class="header-bottom__search-btn" type="submit" name="search-btn">ПОИСК</button>
                         </form>
                         <div class="user-nav">
                             <a class="user-nav__link" href="#">
-                                <img class="user-nav__img" src="images/icon/user-login.svg"
-                                    alt="иконка регистрации/авторизации">
+                                <img class="user-nav__img" src="images/icon/user-login.svg" alt="иконка регистрации/авторизации" width="25" height="32">
                             </a>
                             <a class="user-nav__link" href="#">
-                                <img class="user-nav__img" src="images/icon/heart.svg" alt="иконка сердце">
+                                <img class="user-nav__img" src="images/icon/heart.svg" alt="иконка сердце" width="32" height="28">
                                 <span class="user-nav__num">12</span>
                             </a>
                             <a class="user-nav__link" href="#">
-                                <img class="user-nav__img" src="images/icon/cart.svg" alt="иконка корзины">
+                                <img class="user-nav__img" src="images/icon/cart.svg" alt="иконка корзины" width="32" height="31">
                                 <span class="user-nav__num">12</span>
                             </a>
                         </div>
@@ -131,8 +134,7 @@
                                 <div class="slider__box">
                                     <h1 class="slider__title">СВЕЖАЧОК ВАМ в ХАТУ <span>Скидка -50%</span></h1>
                                     <p class="slider__desc">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до
-                                        50%.
-                                        Торопитесь!</p>
+                                        50%. Торопитесь!</p>
                                     <a class="slider__btn" href="#">Купить сейчас</a>
                                 </div>
                             </div>
@@ -154,8 +156,9 @@
                         <div class="container">
                             <div class="slider__inner">
                                 <div class="slider__box">
-                                    <h1 class="slider__title">Пусть остальные позеленеют от зависти<span>Распродажа
-                                            зелени</span></h1>
+                                    <h1 class="slider__title">Пусть остальные позеленеют от зависти
+                                        <span>Распродажа зелени</span>
+                                    </h1>
                                     <a class="slider__btn" href="#">Купить сейчас</a>
                                 </div>
                             </div>
@@ -188,19 +191,19 @@
                     <h2 class="title">Топовые товары</h2>
                     <ul class="tovars__list">
                         <li class="tovars__item">
-                            <button type="button" class="tovars__button" data-filter="all">Все товары</button>
+                            <button class="tovars__button" type="button" data-filter="all">Все товары</button>
                         </li>
                         <li class="tovars__item">
-                            <button type="button" class="tovars__button" data-filter=".fructs">Фрукты</button>
+                            <button class="tovars__button" type="button" data-filter=".fructs">Фрукты</button>
                         </li>
                         <li class="tovars__item">
-                            <button type="button" class="tovars__button" data-filter=".vegetables">ОВОЩИ</button>
+                            <button class="tovars__button" type="button" data-filter=".vegetables">ОВОЩИ</button>
                         </li>
                         <li class="tovars__item">
-                            <button type="button" class="tovars__button" data-filter=".drinks">Напитки</button>
+                            <button class="tovars__button" type="button" data-filter=".drinks">Напитки</button>
                         </li>
                         <li class="tovars__item">
-                            <button type="button" class="tovars__button" data-filter=".grocery">БАКАЛЕЯ</button>
+                            <button class="tovars__button" type="button" data-filter=".grocery">БАКАЛЕЯ</button>
                         </li>
                     </ul>
                     <div class="tovars__cards">
@@ -221,8 +224,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/pineapple.png" alt="ананас" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/pineapple.png" alt="ананас" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Ананас, 1кг</p>
                                 <div class="card__info-bottom">
@@ -242,8 +246,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/lemon.png" alt="лемон" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/lemon.png" alt="лемон" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Лимон, 1кг</p>
                                 <div class="card__info-bottom">
@@ -268,8 +273,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/dragon fruit.png" alt="питахайя" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/dragon fruit.png" alt="питахайя" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Питахайя красная с белой мякотью, 1шт</p>
                                 <div class="card__info-bottom">
@@ -289,8 +295,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/ketchup.png" alt="кетчут" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/ketchup.png" alt="кетчут" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
                                 <div class="card__info-bottom">
@@ -315,8 +322,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/carrot.png" alt="морковка" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/carrot.jpg" alt="морковка" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Морковь молодая с бабушкиной грядки, 1кг</p>
                                 <div class="card__info-bottom">
@@ -341,8 +349,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/juice.png" alt="ананас" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/juice.png" alt="ананас" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный
                                     апельсин безалкогольнный</p>
@@ -368,8 +377,9 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/coffee.png" alt="кофе" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/coffee.png" alt="кофе" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Кофе с коноплей органический Caffé Salomoni 250г</p>
                                 <div class="card__info-bottom">
@@ -396,15 +406,16 @@
                                         fill="#C1C1C1" />
                                 </svg>
                             </a>
-                            <img class="card__img" src="images/tovars-cards/paprik.png" alt="перец" width="298"
-                                height="215">
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/paprik.png" alt="перец" width="298" height="215">
+                            </a>
                             <div class="card__info">
                                 <p class="card__desc">Перец оранжевый, 1кг</p>
                                 <div class="card__info-bottom">
                                     <div class="card__price">349 ₽</div>
                                     <button class="card__cart" type="button">
                                         <span class="sr-only">Добавление в корзину</span>
-                                        </button>
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -418,7 +429,7 @@
         <div class="container">
             <div class="footer__content">
                 <a class="logo footer__logo" href="#">
-                    <img class="logo__img" src="images/logo.svg" alt="логотип">
+                    <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="60">
                 </a>
                 <div class="footer__inner">
                     <div class="footer__feedback">
@@ -426,7 +437,7 @@
                         <form class="footer__form">
                             <input class="footer__input" type="email" name="email" placeholder="email@email.com"
                                 required>
-                            <button class="footer__btn" type="submit" name="search-btn">ПОИСК</button>
+                            <button class="footer__btn" type="submit" name="search-btn">ПОДПИСАТЬСЯ</button>
                         </form>
                     </div>
                     <ul class="footer__items">
@@ -456,29 +467,38 @@
                         </li>
                     </ul>
                     <address class="footer__contacts">
-                        <p class="footer__contacts-item">Горячая линия
+                        <p class="footer__item">Горячая линия
                             <a class="footer__contacts-link" href="tel:+7907288365">
-                            +7 907 288 365</a>
+                                +7 907 288 365</a>
                         </p>
-                        <p class="footer__contacts-item">Санкт-Петербург, ул. Ленина, 1</p>
+                        <p class="footer__item">Санкт-Петербург, ул. Ленина, 1</p>
                         <ul class="social">
                             <li class="social__item">
-                                <a class="social__link social__link--facebook" href="#"></a>
+                                <a class="social__link social__link--facebook" href="#">
+                                    <span class="sr-only">ссылка на facebook</span>
+                                </a>
                             </li>
                             <li class="social__item">
-                                <a class="social__link social__link--youtube" href="#"></a>
+                                <a class="social__link social__link--youtube" href="#">
+                                    <span class="sr-only">ссылка на youtube</span>
+                                </a>
                             </li>
                             <li class="social__item">
-                                <a class="social__link social__link--telegram" href="#"></a>
+                                <a class="social__link social__link--telegram" href="#">
+                                    <span class="sr-only">ссылка на telegram</span>
+                                </a>
                             </li>
                             <li class="social__item">
-                                <a class="social__link social__link--instagram" href="#"></a>
+                                <a class="social__link social__link--instagram" href="#"
+                                ><span class="sr-only">ссылка на instagram</span>
+                                </a>
                             </li>
                         </ul>
                     </address>
                 </div>
             </div>
         </div>
+
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-inner">
