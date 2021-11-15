@@ -54,12 +54,13 @@ a {
     outline: transparent;
 }
 
+address {
+    font-style: normal;
+}
+
 button {
     border: transparent;
     background-color: transparent;
     cursor: pointer;
-}
-
-address {
-    font-style: normal;
+    padding: 0;
 }

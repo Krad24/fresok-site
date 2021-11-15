@@ -1,0 +1,81 @@
+html,
+body {
+    height: 100%;
+    @extend %opensans-400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $default;
+}
+
+.wrapper {
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section {
+    padding: 72px 0;
+}
+
+.title {
+    @extend %ruda-600;
+    font-size: 32px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: $title;
+}
+
+.button {
+    padding: 12px 24px;
+    background-color: $green-900;
+    border-radius: 6px;
+    color: $white;
+    border: 1px solid $green-900;
+    transition: background-color 0.4s box-shadow 0.3s color 0.4s;
+    &:hover {
+        background-color: #eff6e7;
+    }
+    &:focus {
+        box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+    &:active {
+        box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+        color: rgba(99, 166, 14, 0.5);
+    }
+}
+
+.button--white {
+    background-color: $white;
+    color: $green-900;
+    
+}
+
+.mixitup-control-active {
+    border-bottom: 3px solid $green-200;
+}
