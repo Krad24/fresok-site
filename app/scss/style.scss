@@ -399,10 +399,6 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    &:hover {
-        background: #E0EDCF;
-        color: $green-900;
-    }
 }
 
 .slick-arrows.arrow-prev {
