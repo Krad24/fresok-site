@@ -53,10 +53,13 @@ body {
 
 .button {
     padding: 12px 24px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
     background-color: $green-900;
-    border-radius: 6px;
     color: $white;
     border: 1px solid $green-900;
+    border-radius: 6px;
     transition: background-color 0.4s box-shadow 0.3s color 0.4s;
     &:hover {
         background-color: #eff6e7;
@@ -73,7 +76,6 @@ body {
 .button--white {
     background-color: $white;
     color: $green-900;
-    
 }
 
 .mixitup-control-active {
