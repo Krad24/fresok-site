@@ -192,24 +192,25 @@
             <section class="tovars section">
                 <div class="container">
                     <h2 class="title">Топовые товары</h2>
-                    <ul class="tovars__list">
-                        <li class="tovars__item">
-                            <button class="tovars__button" type="button" data-filter="all">Все товары</button>
+                    <ul class="filter__list">
+                        <li class="filter__item">
+                            <button class="filter__button" type="button" data-filter="all">Все товары</button>
                         </li>
-                        <li class="tovars__item">
-                            <button class="tovars__button" type="button" data-filter=".fructs">Фрукты</button>
+                        <li class="filter__item">
+                            <button class="filter__button" type="button" data-filter=".fructs">Фрукты</button>
                         </li>
-                        <li class="tovars__item">
-                            <button class="tovars__button" type="button" data-filter=".vegetables">ОВОЩИ</button>
+                        <li class="filter__item">
+                            <button class="filter__button" type="button" data-filter=".vegetables">ОВОЩИ</button>
                         </li>
-                        <li class="tovars__item">
-                            <button class="tovars__button" type="button" data-filter=".drinks">Напитки</button>
+                        <li class="filter__item">
+                            <button class="filter__button" type="button" data-filter=".drinks">Напитки</button>
                         </li>
-                        <li class="tovars__item">
-                            <button class="tovars__button" type="button" data-filter=".grocery">БАКАЛЕЯ</button>
+                        <li class="filter__item">
+                            <button class="filter__button" type="button" data-filter=".grocery">БАКАЛЕЯ</button>
                         </li>
                     </ul>
                     <div class="tovars__cards">
+
                         <article class="card mix fructs">
                             <ul class="card__list">
                                 <li class="card__item">
@@ -433,49 +434,95 @@
                     </div>
                     <button class="button tovars__btn" type="button">Показать еще</button>
 
-                    <ul class="tovars__stoks">
-                        <li class="tovars__stoks-item tovars__stoks-item--big"
-                            style="background-image: url('../images/stoks-frukts-bg.jpg')">
-                            <div class="tovars__stoks-content">
-                                <span class="tovars__stoks-name">
+                    <ul class="tovars__suggestions">
+                        <li class="tovars__suggestions-item tovars__suggestions-item--big"
+                            style="background-image: url('../images/suggestions-frukts-bg.jpg')">
+                            <div class="tovars__suggestions-content">
+                                <span class="tovars__suggestions-name">
                                     СВЕЖАЙШИЕ ФРУКТЫ
                                 </span>
-                                <h3 class="tovars__stoks-title">
+                                <h3 class="tovars__suggestions-title">
                                     НАЧНИ ФРУКТОВОЕ ЛЕТО ВСЕГО От 99 ₽
                                 </h3>
-                                <a class="tovars__stoks-link" href="#" target="_blank">
+                                <a class="tovars__suggestions-link" href="#" target="_blank">
                                     ПЕРЕЙТИ К ПОКУПКАМ
                                 </a>
                             </div>
                         </li>
-                        <li class="tovars__stoks-item" style="background-image: url('../images/stoks-veg-bg.jpg')">
-                            <div class="tovars__stoks-content">
-                                <span class="tovars__stoks-subtitle">
+                        <li class="tovars__suggestions-item"
+                            style="background-image: url('../images/suggestions-veg-bg.jpg')">
+                            <div class="tovars__suggestions-content">
+                                <span class="tovars__suggestions-name">
                                     СЕЗОННАЯ РАСПРОДАЖА
                                 </span>
-                                <h3 class="tovars__stoks-title">
+                                <h3 class="tovars__suggestions-title">
                                     ОВОЩЕПАД ДО -50%
                                 </h3>
-                                <a class="tovars__stoks-link" href="#" target="_blank">
+                                <a class="tovars__suggestions-link" href="#" target="_blank">
                                     ПЕРЕЙТИ К ПОКУПКАМ
                                 </a>
 
                             </div>
                         </li>
-                        <li class="tovars__stoks-item" style="background-image: url('../images/stoks-bread-bg.jpg')">
-                            <div class="tovars__stoks-content">
-                                <span class="tovars__stoks-subtitle">
+                        <li class="tovars__suggestions-item"
+                            style="background-image: url('../images/suggestions-bread-bg.jpg')">
+                            <div class="tovars__suggestions-content">
+                                <span class="tovars__suggestions-name">
                                     НЯМ-НЯМ
                                 </span>
-                                <h3 class="tovars__stoks-title">
+                                <h3 class="tovars__suggestions-title">
                                     СВЕЖИЙ ХЛЕБЧИК
                                 </h3>
-                                <a class="tovars__stoks-link" href="#" target="_blank">
+                                <a class="tovars__suggestions-link" href="#" target="_blank">
                                     ПЕРЕЙТИ К ПОКУПКАМ
                                 </a>
                             </div>
                         </li>
                     </ul>
+                </div>
+            </section>
+            <section class="stoks section">
+                <div class="container">
+                    <h2 class="title">Акции</h2>
+                    <ul class="filter__list">
+                        <li class="filter__item">
+                            <button type="button" class="filter__button" data-filter="1">
+                                Все товары
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button type="button" class="filter__button">
+                                НовИНКИ
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button type="button" class="filter__button">
+                                ХИТЫ
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="stoks__cards">
+                        <article class="card card--vertical mix 1">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/pineapple.png" alt="ананас" width="298"
+                                    height="215">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc">Ананас, 1кг</p>
+                                <span class="card__status"></span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price"><span class="card__old-price">1999 ₽</span>999 ₽</div>
+                                    <div class="card__rating"><span>4.5</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="button" type="button">Показать еще</button>
                 </div>
             </section>
         </main>
