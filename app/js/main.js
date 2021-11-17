@@ -9,6 +9,6 @@ $(function(){
         infinite: false,
     });
 
-    var mixer = mixitup('.filter__cards');
-
+    var mixer1 = mixitup('.tovars__cards');
+    var mixer2 = mixitup('.stoks__cards');
 })

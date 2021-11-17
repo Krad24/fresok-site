@@ -2,10 +2,10 @@ body {
     height: 100%;
     font-family: Open Sans, sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.4;
     color: $default;
-    
+    background-color: $white;
 }
 
 .wrapper {
@@ -38,15 +38,10 @@ body {
     overflow: hidden;
 }
 
-.section {
-    padding: 72px 0;
-}
-
 .title {
     font-family: Ruda, sans-serif;
     font-weight: 600;
     font-size: 32px;
-    line-height: 1.4;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -61,21 +56,22 @@ body {
     letter-spacing: 0.03em;
     background-color: $green-900;
     color: $white;
-    border: 1px solid $green-900;
+    border: 1px solid transparent;
     border-radius: 6px;
-    transition: background-color 0.4s box-shadow 0.3s color 0.4s;
+    transition: background-color 0.4s, box-shadow 0.3s, color 0.5s;
+
     &:hover {
-        background-color: #eff6e7;
+        background-color: #4d800c;
     }
+
     &:focus {
-        box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+        box-shadow: 0 0 0 4px #e0edcf;
     }
+
     &:active {
-        box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
-        color: rgba(99, 166, 14, 0.5);
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
-.mixitup-control-active {
-    border-bottom: 3px solid $green-200;
-}
+
