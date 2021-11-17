@@ -486,38 +486,178 @@
                     <h2 class="title">Акции</h2>
                     <ul class="filter__list">
                         <li class="filter__item">
-                            <button type="button" class="filter__button" data-filter="1">
+                            <button type="button" class="filter__button" data-filter="all">
                                 Все товары
                             </button>
                         </li>
                         <li class="filter__item">
-                            <button type="button" class="filter__button">
+                            <button type="button" class="filter__button" data-filter="new">
                                 НовИНКИ
                             </button>
                         </li>
                         <li class="filter__item">
-                            <button type="button" class="filter__button">
+                            <button type="button" class="filter__button" data-filter="hit">
                                 ХИТЫ
                             </button>
                         </li>
                     </ul>
                     <div class="stoks__cards">
-                        <article class="card card--vertical mix 1">
+                        <article class="card stoks__card mix new">
                             <ul class="card__list">
                                 <li class="card__item">
                                     <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
                                 </li>
                             </ul>
-                            <a class="card__link-img" href="#" target="_blank">
-                                <img class="card__img" src="images/tovars-cards/pineapple.png" alt="ананас" width="298"
-                                    height="215">
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/pineapple.jpg" alt="ананас" width="100"
+                                    height="100">
                             </a>
                             <div class="card__info">
-                                <p class="card__desc">Ананас, 1кг</p>
-                                <span class="card__status"></span>
+                                <p class="card__desc stoks__desc">Ананас, 1 кг</p>
+                                <span class="card__status card__status--in stoks__status">В НАЛИЧИИ</span>
                                 <div class="card__info-bottom">
-                                    <div class="card__price"><span class="card__old-price">1999 ₽</span>999 ₽</div>
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">1999 ₽</span>999 <span class="stoks__price--value">₽</span></div>
                                     <div class="card__rating"><span>4.5</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix new">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/coffee.jpg" alt="кофе с коноплей" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Кофе с коноплей органический Caffé Salomoni 250г</p>
+                                <span class="card__status card__status--in stoks__status">В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">877 ₽</span>777 <span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.9</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix new">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/strawberry.jpg" alt="клубника" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Клубника, 1 кг</p>
+                                <span class="card__status card__status--out stoks__status">НЕТ В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">600 ₽</span>440<span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.5</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix new">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/mango.jpg" alt="Манго" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Манго, 1 шт</p>
+                                <span class="card__status card__status--in stoks__status">В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">960 ₽</span>660<span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>5</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix new">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--new" href="#">НОВИНКА</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/salmon.jpg" alt="лосось" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Лосось, 1 кг</p>
+                                <span class="card__status card__status--in stoks__status">В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">1999 ₽</span>999 <span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.5</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix hit">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--hit" href="#">хит</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/veg_juice.jpg" alt="ананас" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Сок Granini овощной 100%, 0.5л</p>
+                                <span class="card__status card__status--in stoks__status">ЗАКАНЧИВАЕТСЯ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">230 ₽</span>180<span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.9</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix hit">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--hit" href="#">хит</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/basket.jpg" alt="фруктовая корзина" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Фруктовая корзина, 1 шт</p>
+                                <span class="card__status card__status--few stoks__status">В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">5990 ₽</span>3990<span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.8</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card stoks__card mix hit">
+                            <ul class="card__list">
+                                <li class="card__item">
+                                    <a class="card__badge card__badge--hit" href="#">ХИТ</a>
+                                </li>
+                            </ul>
+                            <a class="card__link-img stoks__link-img" href="#" target="_blank">
+                                <img class="card__img" src="images/tovars-cards/small/pork.jpg" alt="Свинина" width="100"
+                                    height="100">
+                            </a>
+                            <div class="card__info">
+                                <p class="card__desc stoks__desc">Свинина мякоть, 1 кг</p>
+                                <span class="card__status card__status--in stoks__status">В НАЛИЧИИ</span>
+                                <div class="card__info-bottom">
+                                    <div class="card__price stoks__price"><span class="card__old-price stoks__old-price">599 ₽</span>499<span class="stoks__price--value">₽</span></div>
+                                    <div class="card__rating"><span>4.6</span><img class="card__rating-img" src="images/icon/rating-star.svg" alt="звезда"></div>
                                 </div>
                             </div>
                         </article>
