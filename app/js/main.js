@@ -9,6 +9,17 @@ $(function(){
         infinite: false,
     });
 
-    var mixer1 = mixitup('.top-products__cards');
-    var mixer2 = mixitup('.stoks__cards');
+    
+    var products = document.querySelector('[data-ref="top-products"]');
+    var stoks = document.querySelector('[data-ref="stoks"]');
+
+    var config = {
+        controls: {
+            scope: 'local'
+        }
+    };
+
+    var mixer = mixitup(products, config);
+    var mixer = mixitup(stoks, config);
+
 })
