@@ -90,3 +90,11 @@ body {
         color: rgba($white, 0.5);
     }
 }
+
+.links {
+    transition: opacity 0.5s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
