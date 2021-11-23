@@ -57,7 +57,7 @@
         letter-spacing: 0.1em;
         margin-bottom: 18px;
         display: block;
-
+        @include line-clamp;
 
         &--big {
             text-shadow: 1px 1px 0 rgba($black, 0.25);
@@ -69,16 +69,7 @@
         font-weight: 600;
         font-size: 30px;
         margin-bottom: 12px;
-
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        word-break: keep-all;
-        line-break: auto;
-        hyphens: auto;
+        @include line-clamps (30, 1.4, 2);
 
         &--big {
             text-shadow: 2px 2px 0 rgba($black, 0.25);

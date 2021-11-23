@@ -9,15 +9,6 @@
     }
 
     &__link {
-        max-width: 12em;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        word-break: keep-all;
-        line-break: auto;
-        hyphens: auto;
+        @include line-clamps(14, 1.4, 2);
     }
 }

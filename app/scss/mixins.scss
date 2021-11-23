@@ -1,5 +1,5 @@
 //Ограничение нескольких строк
-@mixin line-clamp($font-size, $line-height, $lines-to-show) {
+@mixin line-clamps($font-size, $line-height, $lines-to-show) {
     @if unitless($line-height) == false {
         $line-height: create-unitless-line-height($font-size, $line-height);
     }

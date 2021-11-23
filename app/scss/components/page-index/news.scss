@@ -95,5 +95,7 @@
         font-size: 16px;
         line-height: 1.5;
         padding: 18px;
+
+        @include line-clamps (16, 1.5, 5);
     }
 }

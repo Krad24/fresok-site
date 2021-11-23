@@ -38,4 +38,8 @@
         color: $title;
         margin-bottom: 7px;
     }
+
+    &__text {
+        @include line-clamps (14, 1.4, 4);
+    }
 }

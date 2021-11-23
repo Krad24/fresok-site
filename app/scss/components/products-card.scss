@@ -113,15 +113,7 @@
         margin-bottom: 10px;
         letter-spacing: 0.03em;
         color: $title;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        word-break: keep-all;
-        line-break: auto;
-        hyphens: auto;
+        @include line-clamps(14, 1.4, 3);
     }
 
     &__bottom {

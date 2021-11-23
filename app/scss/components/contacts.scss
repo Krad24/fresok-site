@@ -1,17 +1,9 @@
 .contacts {
     &__link {
         display: block;
-
-        max-width: 16em;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        word-break: keep-all;
-        line-break: auto;
-        hyphens: auto;
+        text-transform: capitalize;
+        max-width: 250px;
+        @include line-clamps(14, 1.4, 2);
 
         &:not(:last-child) {
             margin-bottom: 24px;

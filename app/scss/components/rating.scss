@@ -10,8 +10,7 @@
         padding-right: 18px;
         position: relative;
         &::after {
-            content: '';
-            position: absolute;
+            @include pseudo;
             right: 0;
             top: -1px;
             width: 16px;
