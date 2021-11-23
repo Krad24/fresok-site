@@ -1,0 +1,20 @@
+.payment {
+    display: flex;
+
+    &__link {
+        height: 29px;
+        @extend %properties-bg;
+
+        &--visa {
+            width: 93px;
+        }
+
+        &--mc {
+            width: 49px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}

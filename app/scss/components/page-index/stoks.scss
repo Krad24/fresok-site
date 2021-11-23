@@ -1,0 +1,55 @@
+.stoks {
+    background-color: $silver-100;
+
+    &__card {
+        max-width: 300px;
+
+        padding: 10px 12px;
+        background-color: $white;
+    }
+
+    &__link {
+        display: block;
+        float: left;
+        margin-right: 12px;
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__bottom {
+        flex-direction: column;
+    }
+
+    &__desc {
+        margin-bottom: 7px;
+    }
+
+    &__price {
+        display: flex;
+        margin-right: 5px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+
+        &--value {
+            font-size: 14px;
+            align-self: flex-end;
+        }
+
+        &--old {
+            font-size: 12px;
+            font-weight: 400;
+            order: 1;
+            margin: 0 0 0 12px;
+            align-self: flex-end;
+        }
+    }
+}

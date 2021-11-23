@@ -1,0 +1,27 @@
+.rating {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    &__num {
+        display: block;
+        padding-right: 18px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -1px;
+            width: 16px;
+            height: 16px;
+            background-image: url('../images/icon/rating-star.svg');
+        }
+    }
+
+    &__img {
+        width: 16px;
+        height: 16px;
+    }
+}
