@@ -31,7 +31,7 @@
 }
 
 //для адаптива
-@mixin r( $width) {
+@mixin r($width) {
     @media only screen and (max-width: ($width + "px")) {
         @content;
     }
