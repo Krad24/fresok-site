@@ -5,7 +5,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin-right: 24px;
+            margin-right: 25px;
         }
     }
 
@@ -36,5 +36,18 @@
             border-radius: 0;
             border-bottom: 3px solid $green-200;
         }
+    }
+
+    @include r($md) {
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+
+        &__item {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include r($sm) {
+        margin-bottom: 24px;
     }
 }

@@ -1,7 +1,6 @@
 .slider-top {
-    &__item {
+    &__item-inner {
         @extend %properties-bg;
-        width: 100%;
     }
 
     &__inner {
@@ -166,6 +165,10 @@
         &__title,
         &__subtitle {
             font-size: 30px;
+        }
+
+        &__item-inner {
+            background-position: center right;
         }
 
         &__title,

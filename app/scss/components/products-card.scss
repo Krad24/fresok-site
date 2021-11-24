@@ -58,7 +58,6 @@
                 &--heart {
                     fill: #ffb800;
                 }
-                
             }
         }
 
@@ -76,7 +75,6 @@
                 &--heart {
                     fill: rgba(255, 184, 0, 0.5);
                 }
-                
             }
         }
     }
@@ -100,8 +98,6 @@
     }
 
     &__img {
-        width: 300px;
-        height: 215px;
         object-fit: cover;
     }
 
@@ -164,8 +160,23 @@
                 &--cart {
                     fill: rgba($white, 0.5);
                 }
-                
             }
+        }
+    }
+
+    @include r($lg) {
+        padding: 57px 12px 12px;
+    }
+
+    @include r($md) {
+        max-width: 100%;
+    }
+
+    @include r($sm) {
+        &__img {
+            width: 150px;
+            height: 110px;
+            margin: 0 auto;
         }
     }
 }
