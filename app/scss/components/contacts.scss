@@ -9,4 +9,22 @@
             margin-bottom: 24px;
         }
     }
+
+    @include r($lg) {
+        order: -1;
+
+        &__link:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include r($md) {
+        &__link:not(:last-child) {
+            margin-bottom: 6px;
+        }
+
+        &__link {
+            padding: 12px 0;
+        }
+    }
 }

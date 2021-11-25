@@ -1,16 +1,9 @@
 .social {
     display: flex;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 12px;
-        }
-    }
-
     &__link {
         display: block;
-        width: 32px;
-        height: 32px;
+        padding: 5px 6px;
         transition: box-shadow 0.3s, opacity 0.5s;
 
         &:hover {

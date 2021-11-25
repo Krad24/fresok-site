@@ -38,7 +38,6 @@
     }
 
     &__desc {
-        font-size: 16px;
         margin-bottom: 32px;
         max-width: 70%;
         @include line-clamps(16, 1.4, 2);
