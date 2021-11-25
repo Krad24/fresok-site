@@ -117,25 +117,4 @@ body {
             grid-template-columns: repeat(3, 1fr);
         }
     }
-
-    @include r($lg) {
-        &__cards {
-            grid-gap: 10px;
-        }
-    }
-
-    @include r($md) {
-        &__cards {
-            grid-template-columns: repeat(2, 1fr);
-            margin-bottom: 30px;
-        }
-    }
-
-    @include r($sm) {
-        &__cards {
-            grid-gap: 5px;
-            margin-bottom: 24px;
-            grid-template-columns: repeat(2, 50%);
-        }
-    }
 }

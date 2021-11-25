@@ -32,7 +32,7 @@
         justify-content: center;
         max-width: 300px;
         width: 100%;
-        padding: 76px 0 76px 32px;
+        padding: 76px 32px;
         @extend %properties-bg;
         border-radius: 3px;
 
@@ -45,10 +45,6 @@
             max-width: 630px;
             width: 100%;
         }
-    }
-
-    &__content {
-        max-width: 73%;
     }
 
     &__name {
@@ -65,6 +61,7 @@
     }
 
     &__text {
+        width: 77%;
         font-family: "Ruda", sans-serif;
         font-weight: 600;
         font-size: 30px;
@@ -114,27 +111,21 @@
     }
 
     @include r($lg) {
+        &__cards {
+            grid-gap: 10px;
+        }
+
         &__btn {
             margin-bottom: 48px;
         }
     }
 
     @include r($md) {
-        &__offer-item {
-            margin-bottom: 20px;
-            padding: 76px 0 30px 15px;
-
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 30px;
         }
 
-        &__content {
-            max-width: 90%;
-        }
-    }
-
-    @include r($sm) {
         &__offer {
             display: block;
         }
@@ -151,9 +142,37 @@
                 max-width: 100%;
             }
         }
+
+        &__offer-link {
+            padding: 13px 0;
+        }
     }
 
-    &__content {
-        max-width: 90%;
+    @include r($sm) {
+        &__cards {
+            grid-gap: 5px;
+            margin-bottom: 24px;
+            grid-template-columns: repeat(2, 50%);
+        }
+
+        &__offer-item {
+            padding: 76px 15px 30px 15px;
+        }
+
+        
+        &__text {
+            width: 52%;
+            font-size: 24px;
+            margin-bottom: 77px;
+
+            &--big {
+                width: 88%;
+            }
+        }
+
+        &__offer-link {
+            display: inline;
+            width: auto;
+        }
     }
 }

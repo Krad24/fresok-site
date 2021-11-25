@@ -92,10 +92,92 @@
     &__text {
         transition: color 0.5s;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 1.5;
         padding: 18px;
-
         @include line-clamps (16, 1.5, 5);
     }
+
+    @include r($xl) {
+        &__top {
+            justify-content: space-around;
+        }
+
+        &__list{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin: 0 30px 30px 0;
+            }
+        }
+    }
+
+    @include r($lg) {
+        &__brands {
+            margin-bottom: 48px;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin: 0 18px 30px 0;
+            }
+        }
+
+        &__content {
+            max-width: 350px;
+        }
+    }
+
+    @include r($md) {
+        &__list{
+            display: block;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin: 0 0 30px 0;
+            }
+        }
+
+        &__content {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__link {
+            padding: 13px 0;
+        }
+    }
+
+    @include r($sm) {
+        &__top {
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin: 0 0 15px 0;
+            }
+        }
+
+        &__content {
+            max-width: 100%;
+        }
+
+        &__text {
+            padding: 15px;
+            @include line-clamps (14, 1.4, 5);
+        }
+    }
 }
+
