@@ -29,7 +29,7 @@
             &::after {
                 width: 48px;
                 height: 48px;
-                background-image: url("../images/icon/search.svg");
+                background-image: url("../images/icon/search-green.svg");
                 top: 50%;
                 left: 50%;
                 background-color: $white;
@@ -161,7 +161,7 @@
     }
 
     @include r($lg) {
-        padding: 57px 12px 12px;
+        padding: 59px 12px 12px;
     }
 
     @include r($md) {
@@ -177,6 +177,21 @@
             width: 150px;
             height: 110px;
             margin: 0 auto;
+        }
+
+        &__icon {
+            &--heart{
+                width: 24px;
+                height: 21px;
+            }
+        }
+
+        &__desc {
+            margin-bottom: 48px;
+        }
+
+        &__link {
+            margin-bottom: 12px;
         }
     }
 }

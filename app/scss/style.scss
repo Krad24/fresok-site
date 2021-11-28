@@ -5,8 +5,6 @@
 @import "libs";
 @import "global";
 
-@import 'components/header.scss';
-
 @import 'components/form-search.scss';
 
 @import 'components/logo.scss';
@@ -35,8 +33,6 @@
 
 @import 'components/page-index/news.scss';
 
-@import 'components/footer.scss';
-
 @import 'components/menu.scss';
 
 @import 'components/contacts.scss';
@@ -44,3 +40,9 @@
 @import 'components/social.scss';
 
 @import 'components/payment.scss';
+
+@import 'components/header.scss';
+
+@import 'components/burger.scss';
+
+@import 'components/footer.scss';

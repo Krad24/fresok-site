@@ -83,12 +83,22 @@
     }
 
     @include r($xl) {
+        &__items {
+            column-count: 2;
+            column-gap: 60px;
+        }
+
         &__feedback {
             margin-right: 20px;
         }
     }
 
     @include r($lg) {
+        &__items {
+            column-count: 4;
+            padding: 24px 0;
+        }
+
         &__inner {
             justify-content: center;
             flex-direction: column;
@@ -151,6 +161,16 @@
     }
 
     @include r($md) {
+        &__items {
+            column-count: 3;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 0px;
+            }
+        }
+
         &__bottom {
             padding: 16px 0 24px;
         }
@@ -160,13 +180,30 @@
         }
 
         &__logo {
-            margin: 0 auto 12px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12px;
         }
+
     }
 
     @include r($sm) {
+        &__content {
+            padding: 24px 0;
+        }
+
+        &__items {
+            column-count: 2;
+            column-gap: 30px;
+            padding: 20px 0;
+        }
+
         &__form {
             max-width: 100%;
+        }
+
+        &__desc {
+            text-align: left;
         }
 
         &__btn {

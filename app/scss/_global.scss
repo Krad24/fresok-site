@@ -6,6 +6,12 @@ body {
     line-height: 1.4;
     color: $default;
     background-color: $white;
+
+    @include r($lg) {
+        &.lock {
+            overflow-y: hidden;
+        }
+    }
 }
 
 .wrapper {
@@ -62,7 +68,7 @@ body {
 
     @include r($sm) {
         font-size: 24px;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
 }
 

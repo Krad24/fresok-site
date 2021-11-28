@@ -10,6 +10,10 @@
         align-items: center;
     }
 
+    &__symbol {
+        display: none;
+    }
+
     &__contacts {
         display: flex;
     }
@@ -102,6 +106,7 @@
         margin-right: 30px;
         background-color: $white;
         border-radius: 6px;
+        flex-shrink: 0;
 
         &:hover {
             background-color: $green-200;
@@ -144,7 +149,7 @@
     &__icon {
         width: 26px;
         height: 17px;
-        fill: #63A60E;
+        fill: #63a60e;
         margin-right: 18px;
     }
 
@@ -208,5 +213,164 @@
     &__form {
         margin-right: auto;
         box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.2);
+    }
+
+    &__user-nav {
+        margin-left: 15px;
+    }
+
+    &__user-search {
+        width: 24px;
+        height: 24px;
+        display: none;
+    }
+
+    &__burger-btn {
+        padding: 11px 7px;
+        display: none;
+
+        span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    @include r($xl) {
+        &__logo,
+        &__catalog {
+            margin-right: 15px;
+        }
+    }
+
+    @include r($lg) {
+        &__catalog,
+        //&__form,
+        &__user-item:first-child,
+        &__sr,
+        &__num,
+        //&__user-heart,
+        &__logo-img,
+        &__contacts:last-child {
+            display: none;
+        }
+
+        &__top {
+            padding: 3px 0;
+        }
+
+        &__bottom {
+            padding: 6px 0;
+        }
+
+        &__link {
+            padding: 0;
+            font-size: 0;
+            padding: 26px 22px 18px;
+
+            &::after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+
+        &__form {
+            margin-right: 0;
+        }
+
+        &__logo {
+            padding: 2px 4px;
+        }
+
+        &__symbol {
+            max-width: 37px;
+            display: block;
+        }
+
+        &__bottom-inner {
+            justify-content: space-between;
+        }
+
+        &__burger-btn {
+            display: block;
+        }
+
+        &__user-cart {
+            width: 24px;
+            height: 24px;
+        }
+
+        &__user-num {
+            padding: 4px 3px 4px;
+            top: 3px;
+            right: 25px;
+        }
+
+        &__user-item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include r($sm) {
+        &__user-heart {
+            display: none;
+        }
+
+        &__user-search {
+            display: block;
+        }
+
+        &__nav {
+            position: relative;
+        }
+
+        &__form {
+            position: absolute;
+            bottom: -55px;
+            left: 0;
+            right: 0;
+            border: 1px solid $dark-800;
+            z-index: 3;
+            border-radius: 0;
+            opacity: 0;
+            transform: translateX(-120%);
+            transition: opacity 0.5s;
+
+            &--active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &__form-input,
+        &__form-btn {
+            border-radius: 0;
+        }
+
+        &__form-input{
+            padding: 15px 125px 15px 55px;
+        }
+
+        &__form-btn {
+            padding: 15px 26px;
+        }
     }
 }
