@@ -13,7 +13,7 @@ $(function () {
             settings: {
                 dots: true,
                 arrows: false,
-                //autoplay: true,
+                autoplay: true,
             }
         }, ]
     });
