@@ -24,13 +24,13 @@
 
     &__items {
         background-color: $white;
-        width: 80vw;
+        width: 83vw;
         height: 100vh;
         overflow: auto;
     }
 
     &__top {
-        padding: 26px 15px;
+        padding: 24px 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -51,7 +51,7 @@
     }
 
     &__authorization {
-        padding: 15px;
+        padding: 2px 15px;
         background-color: $green-900;
         text-align: center;
     }
@@ -99,7 +99,7 @@
 
     &__contacts {
         flex-direction: column;
-        padding: 24px 15px;
+        padding: 7px 15px;
         border-top: 1px solid rgba(193, 193, 193, 0.3);
         border-bottom: 1px solid rgba(193, 193, 193, 0.3);
     }
@@ -129,7 +129,7 @@
         }
 
         &:not(:last-child) {
-            margin-bottom: 18px;
+            margin-bottom: 8px;
         }
     }
 
