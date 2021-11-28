@@ -6,6 +6,41 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
+const replace = require('gulp-replace');
+const cheerio = require('gulp-cheerio');
+const fileInclude = require('gulp-file-include');
+
+const htmlInclude = () => {
+    return src(['app/html/*.html'])
+    .pipe(fileInclude ({
+        prefix: '@',
+        basepath: '@file',
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream());
+}
+
+const svgSprites = () => {
+    return src (['app/images/icon/icon-svg/*.svg'])
+    .pipe(cheerio({
+        run: function($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        }, 
+        parserOptions : {xmlMode: true}
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+        mode: {
+            stack: {
+                sprite : "../sprite.svg"
+            }
+        },
+    }))
+    .pipe(dest('app/images'))
+}
 
 
 function browsersync() {
@@ -78,8 +113,14 @@ function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
+    watch(['app/images/icon/icon-svg/*.svg'], svgSprites);
+    watch(['app/images/icon/icon-svg/*.svg']).on('change', browserSync.reload);
+    watch(['app/html/**/*.html'], htmlInclude);
+    watch(['app/scss/**/*.scss']).on('change', browserSync.reload);
 }
 
+exports.htmlInclude = htmlInclude;
+exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -87,4 +128,4 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, svgSprites, htmlInclude, browsersync, watching);

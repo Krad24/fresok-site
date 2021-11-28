@@ -1,0 +1,208 @@
+<header class="header">
+    <nav class="header__nav">
+        <!-- <div class="cart">
+            <div class="cart__header">
+                <div class="cart__inner">
+                    <h3 class="cart__title">корзина</h3>
+                    <button class="cart__clear" type="button">очистить корзину</button>
+                </div>
+                <div class="cart__img">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_639_420)">
+                            <path
+                                d="m13.4069 12.0066l23.6947 1.7188c24.0917 1.33532 24.1028 0.702587 23.7193 0.305521c23.3358 -0.0915446 22.7031 -0.102555 22.306 0.280924c22.2977 0.288948 22.2895 0.297147 22.2814 0.305521l11.9935 10.5933l1.70569 0.305463c1.30863 -0.0780163 0.675896 -0.0670062 0.292417 0.33006c-0.0816925 0.717404 -0.0816925 1.33145 0.292417 1.7188l10.5802 12.0066l0.292417 22.2944c-0.0977977 22.6847 -0.0977977 23.3174 0.292417 23.7077c0.68269 24.0979 1.31542 24.0979 1.70569 23.7077l11.9935 13.4199l22.2813 23.7077c22.6784 24.0912 23.3111 24.0802 23.6946 23.6831c24.0687 23.2958 24.0687 22.6817 23.6946 22.2944l13.4069 12.0066z"
+                                fill="#31352b" />
+                        </g>
+                        <defs>
+                            <clippath id="clip0_639_420">
+                                <rect width="24" height="24" fill="white" />
+                            </clippath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <ul class="cart__list">
+                <li class="cart__item">
+                    <article class="products-card">
+                        <img class="products-card__img" src="images/products-cards/carrot.png" alt="морковка"
+                            width="60" height="60">
+                        <div class="products-card__info">
+                            <h3 class="products-card__desc">
+                                морковь молодая с бабушкиной грядки, 1кг
+                            </h3>
+                            <div class="products-card__bottom">
+                                <span class="card__price card__price--one">999<span>₽</span></span>
+                                <div class="quantity">
+                                    <button class="quantity__btn quantity__btn--plus" type="button"
+                                        name="button"></button>
+                                    <input type="quantity__text" name="name" value="1">
+                                    <button class="quantity__btn quantity__btn--minus" type="button"
+                                        name="button"></button>
+                                </div>
+                                <span class="card__price">1999<span>₽</span></span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="cart__item">
+                    <article class="products-card">
+                        <img class="products-card__img" src="images/products-cards/carrot.png" alt="морковка"
+                            width="60" height="60">
+                        <div class="products-card__info">
+                            <h3 class="products-card__desc">
+                                морковь молодая с бабушкиной грядки, 1кг
+                            </h3>
+                            <div class="products-card__bottom">
+                                <span class="card__price card__price--one">999<span>₽</span></span>
+                                <div class="quantity">
+                                    <button class="quantity__btn quantity__btn--plus" type="button"
+                                        name="button"></button>
+                                    <input type="quantity__num" name="name" value="1">
+                                    <button class="quantity__btn quantity__btn--minus" type="button"
+                                        name="button"></button>
+                                </div>
+                                <span class="card__price">1999<span>₽</span></span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            <div class="cart__bottom">
+                <div class="cart__sum">
+                    товаров на сумму
+                    <span class="card__result">2038<span>₽</span></span>
+                </div>
+                <button class="cart__buy" type="button">оформить заказ</button>
+            </div>
+        </div> -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <button class="header__burger-btn" type="button"><span></span><span></span><span></span></button>
+                    <ul class="header__contacts">
+                        <li class="header__item">
+                            <a class="header__link header__link--address" href="#">
+                                адрес и время доставкa
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link header__link--phone" href="#">
+                                горячая линия 24/7
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__contacts">
+                        <li class="header__item header__item--menu">
+                            <a class="header__link" href="#">доставка</a>
+                        </li>
+                        <li class="header__item header__item--menu">
+                            <a class="header__link" href="#">о нас</a>
+                        </li>
+                        <li class="header__item header__item--menu">
+                            <a class="header__link" href="#">новости</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom-inner">
+                    <a class="header__logo logo " href="#">
+                        <img class="logo__img header__logo-img" src="images/icon/icon-svg/logo.svg" alt="логотип"
+                            width="200" height="60">
+                        <img class="header__symbol" src="images/icon/logo-symbol.svg" alt="символ логотипа" width="37"
+                            height="40">
+                    </a>
+                    <div class="header__catalog">
+                        <button class="header__btn" type="button">
+                            <svg class="header__icon">
+                                <use xlink:href="images/sprite.svg#catalog-burger"></use>
+                            </svg>
+                            Каталог продуктов
+                        </button>
+                        <ul class="header__catalog-list">
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Овощи и фрукты</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Бакалея</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Молочные продукты</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Хлеб</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Мясо</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Колбаса</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Рыба</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Алкоголь</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Напитки</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Торты</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Мясо</a>
+                            </li>
+                            <li class="header__catalog-item">
+                                <a class="header__catalog-link" href="#">Чай, кофе</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="form-search header__form">
+                        <label class="form-search__label" for="search">
+                            <span class="sr-only">поле для поиска</span>
+                        </label>
+                        <input class="form-search__input header__form-input" id="search" type="search" name="search"
+                            placeholder="Найти в магазине ..." required>
+                        <button class="form-search__btn header__form-btn" type="submit" name="search-btn">поиск</button>
+                    </form>
+                    <ul class="user-nav header__user-nav">
+                        <li class="user-nav__item header__user-item">
+                            <a class="user-nav__link" href="#">
+                                <svg class="user-nav__icon user-nav__icon--login">
+                                    <use xlink:href="images/sprite.svg#user-login"></use>
+                                </svg>
+                                <span class="sr-only">иконка регистрации/авторизации</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__item header__user-item">
+                            <a class="user-nav__link" href="#">
+                                <svg class="user-nav__icon header__user-search">
+                                    <use xlink:href="images/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="user-nav__icon user-nav__icon--heart header__user-heart">
+                                    <use xlink:href="images/sprite.svg#heart"></use>
+                                </svg>
+                                <span class="sr-only header__sr">иконка сердце</span>
+                                <span class="user-nav__num header__num">12</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__item header__user-item">
+                            <a class="user-nav__link" href="#">
+                                <svg class="user-nav__icon user-nav__icon--cart header__user-cart">
+                                    <use xlink:href="images/sprite.svg#cart"></use>
+                                </svg>
+                                <span class="sr-only">корзина с заказами</span>
+                                <span class="user-nav__num header__user-num">12</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        @include('burger.html')
+    </nav>
+</header>

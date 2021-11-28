@@ -1,0 +1,155 @@
+.stoks {
+    background-color: $silver-100;
+
+    &__card {
+        max-width: 300px;
+        padding: 10px 12px;
+        background-color: $white;
+    }
+
+    &__link {
+        display: block;
+        float: left;
+        margin-right: 12px;
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__bottom {
+        flex-direction: column;
+    }
+
+    &__desc {
+        margin-bottom: 7px;
+    }
+
+    &__price {
+        display: flex;
+        margin-right: 5px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+
+        &--value {
+            font-size: 14px;
+            align-self: flex-end;
+        }
+
+        &--old {
+            font-size: 12px;
+            font-weight: 400;
+            order: 1;
+            margin: 0 0 0 12px;
+            align-self: flex-end;
+        }
+    }
+
+    @include r($lg) {
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+        }
+
+        &__card {
+            max-width: 100%;
+        }
+    }
+
+    @include r($md) {
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 25px;
+        }
+
+        &__card {
+            height: 200px;
+            max-width: 70%;
+            margin: 0 auto;
+            padding: 20px 12px;
+        } 
+        
+        &__img {
+            width: 130px;
+            height: 130px;
+        }
+
+        &__desc {
+            height: 75px;
+            margin-bottom: 30px;
+            @include line-clamps(18, 1.4, 3);
+        }
+
+        &__price {
+            font-size: 24px;
+    
+            &--value {
+                font-size: 20px;
+            }
+    
+            &--old {
+                font-size: 18px;
+            }
+        }
+
+        &__status {
+            font-size: 18px;
+        }
+
+        &__rating {
+            font-size: 18px;
+        }
+
+    }
+
+    @include r($sm) {
+        &__cards {
+            grid-gap: 13px;
+            margin-bottom: 24px;
+        }
+
+        &__card {
+            height: auto;
+            max-width: 100%;
+            padding: 9px 12px;
+        } 
+        
+        &__img {
+            width: 100px;
+            height: 100px;
+        }
+
+        &__desc {
+            height: 60px;
+            margin-bottom: 7px;
+            @include line-clamps(14, 1.4, 3);
+        }
+
+        &__price {
+            font-size: 20px;
+    
+            &--value {
+                font-size: 14px;
+            }
+    
+            &--old {
+                font-size: 12px;
+            }
+        }
+
+        &__status {
+            font-size: 12px;
+        }
+
+        &__rating {
+            font-size: 14px;
+        }
+    }
+}

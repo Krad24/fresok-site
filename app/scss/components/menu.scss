@@ -1,0 +1,17 @@
+.menu {
+    column-count: 3;
+    column-gap: 80px;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+    }
+
+    &__link {
+        @include line-clamps(14, 1.2, 2);
+        display: block;
+        padding: 12px 0;
+        letter-spacing: 0.03em;
+    }
+}
