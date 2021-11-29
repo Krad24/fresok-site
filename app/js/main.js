@@ -8,16 +8,14 @@ $(function () {
             '</svg></button>',
         infinite: false,
 
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    dots: true,
-                    arrows: false,
-                    autoplay: true,
-                }
-            },
-        ]
+        responsive: [{
+            breakpoint: 1201,
+            settings: {
+                dots: true,
+                arrows: false,
+                autoplay: true,
+            }
+        }, ]
     });
 
     $('.slider-brands').slick({
@@ -26,8 +24,7 @@ $(function () {
         arrows: false,
         autoplay: true,
 
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 993,
                 settings: {
                     slidesToShow: 4,
@@ -50,6 +47,36 @@ $(function () {
         ]
     });
 
+    $('.header__burger-btn').on('click', function () {
+        $('.burger').addClass('burger--active');
+        $('body').addClass('lock');
+    });
+
+    $('body').on('click', function (e) {
+        if(e.target.className == 'burger burger--active' || e.target.className == 'burger__close'){
+            $('.burger').removeClass('burger--active');
+        }
+    });
+
+    $('.header__user-search').on('click', function () {
+        $('.header__form').toggleClass('header__form--active');
+    });
+
+
+
+    if ($(window).width() < 576 ) {
+        $(".header__form-input").attr("placeholder","Я ищу...");
+    } else (
+        $(".header__form-input").attr("placeholder","Найти в магазине ...")
+    );
+
+    window.addEventListener("resize", function() {
+        if ($(window).width() < 576 ) {
+            $(".header__form-input").attr("placeholder","Я ищу...");
+        } else (
+            $(".header__form-input").attr("placeholder","Найти в магазине ...")
+        );
+    });
 
     var products = document.querySelector('[data-ref="top-products"]');
     var stoks = document.querySelector('[data-ref="stoks"]');

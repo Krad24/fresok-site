@@ -111,14 +111,14 @@
 
     @include r($sm) {
         &__cards {
-            grid-gap: 15px;
+            grid-gap: 13px;
             margin-bottom: 24px;
         }
 
         &__card {
             height: auto;
             max-width: 100%;
-            padding: 12px;
+            padding: 9px 12px;
         } 
         
         &__img {

@@ -12,7 +12,7 @@
     &__button {
         font-weight: 700;
         font-size: 15px;
-        line-height: 140%;
+        line-height: 1.4;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: $default;
@@ -43,7 +43,7 @@
         flex-wrap: wrap;
 
         &__item {
-            margin-bottom: 15px;
+            margin-bottom: 0;
         }
 
         &__button {
@@ -52,6 +52,10 @@
     }
 
     @include r($sm) {
-        margin-bottom: 24px;
+        margin-bottom: 10px;
+
+        &__button {
+            font-size: 14px;
+        }
     }
 }

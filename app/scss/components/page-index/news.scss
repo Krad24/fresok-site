@@ -115,7 +115,7 @@
 
     @include r($lg) {
         &__brands {
-            margin-bottom: 48px;
+            margin-bottom: 42px;
         }
 
         &__item {
@@ -147,6 +147,7 @@
 
         &__img {
             width: 100%;
+            object-fit: cover;
         }
 
         &__link {
@@ -177,6 +178,10 @@
         &__text {
             padding: 15px;
             @include line-clamps (14, 1.4, 5);
+        }
+
+        &__img {
+            height: 200px;
         }
     }
 }

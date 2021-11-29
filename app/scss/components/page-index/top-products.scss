@@ -32,8 +32,6 @@
         justify-content: center;
         max-width: 300px;
         width: 100%;
-        padding: 76px 32px;
-        @extend %properties-bg;
         border-radius: 3px;
 
         &:not(:last-child) {
@@ -45,6 +43,11 @@
             max-width: 630px;
             width: 100%;
         }
+    }
+
+    &__content {
+        padding: 76px 32px;
+        @extend %properties-bg;
     }
 
     &__name {
@@ -115,7 +118,7 @@
         }
 
         &__btn {
-            margin-bottom: 48px;
+            margin-bottom: 45px;
         }
     }
 
@@ -154,7 +157,7 @@
             grid-template-columns: repeat(2, 50%);
         }
 
-        &__offer-item {
+        &__content {
             padding: 76px 15px 30px 15px;
         }
 
@@ -165,7 +168,7 @@
             margin-bottom: 77px;
 
             &--big {
-                width: 88%;
+                width: 87%;
             }
         }
 
