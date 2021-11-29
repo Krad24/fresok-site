@@ -250,11 +250,9 @@
 
     @include r($lg) {
         &__catalog,
-        //&__form,
         &__user-item:first-child,
         &__sr,
         &__num,
-        //&__user-heart,
         &__logo-img,
         &__contacts:last-child {
             display: none;
