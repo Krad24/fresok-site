@@ -81,6 +81,8 @@
     &__lable {
         display: flex;
         align-items: center;
+        margin-bottom: 12px;
+        position: relative;
     }
 
     &__name {
@@ -88,4 +90,42 @@
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
+
+    &__filter-box {
+        margin-right: 12px;
+    }
+
+    &__input {
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        position: absolute;
+        left: -4px;
+        bottom: -3px;
+        opacity: 0;
+
+        &:checked + .catalog__checkbox {
+            background-image: url("../../../images/icon/tick.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            border-color: $default;
+        }
+    }
+
+    &__checkbox {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: $silver-100;
+        border: 1px solid $silver-600;
+        border-radius: 3px;
+    }
 }
+
+.irs-from,
+.irs-to,
+.irs-min,
+.irs-max {
+    display: none;
+}
+
