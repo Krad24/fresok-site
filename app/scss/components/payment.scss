@@ -1,17 +1,17 @@
 .payment {
-    display: flex;
+  display: flex;
 
-    &__link {
-        &:not(:last-child) {
-            margin-right: 24px;
-        }
-    }
+  @include r ($md) {
+    padding: 8px 0;
+  }
 
-    @include r ($md) {
-        padding: 8px 0;
-    }
+  @include r ($sm) {
+    margin-bottom: 16px;
+  }
 
-    @include r ($sm) {
-        margin-bottom: 16px;
+  &__link {
+    &:not(:last-child) {
+      margin-right: 24px;
     }
+  }
 }

@@ -1,150 +1,160 @@
 .burger {
-    overflow: auto;
-    position: absolute;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transform: translateX(-120%);
+  transition: transform 0.5s;
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &::before {
+    @include pseudo;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 5;
-    transform: translateX(-120%);
-    transition: transform 0.5s;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .15);
+    z-index: -1;
+  }
 
-    &--active {
-        transform: translateX(0);
+  &__items {
+    background-color: $white;
+    width: 300px;
+    height: 100vh;
+    padding-bottom: 100px;
+    overflow: auto;
+  }
+
+  &__top {
+    padding: 24px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    fill: $green-900;
+    width: 200px;
+    height: 60px;
+  }
+
+  &__close {
+    padding: 22px;
+    background-image: url("../../images/icon/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+  }
+
+  &__authorization {
+    padding: 2px 4px;
+    background-color: $green-900;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $white;
+  }
+
+  &__auth {
+    display: block;
+    padding: 0 9px;
+    position: relative;
+
+    &:not(:last-child){
+      &::after{
+        @include pseudo;
+        height: 18px;
+        width: 2px;
+        background-color: $white;
+        right: 0;
+        top: 0;
+      }
     }
+  }
+
+  &__catalog {
+    display: block;
+    width: 100%;
+  }
+
+  &__btn {
+    color: $dark-800;
+    font-size: 18px;
+    line-height: 1;
 
     &::before {
-        @include pseudo;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, .15);
-        z-index: -1;
+      display: none;
+    }
+  }
+
+  &__catalog-icon {
+    fill: $dark-800;
+  }
+
+  &__contacts {
+    flex-direction: column;
+    padding: 7px 15px;
+    border-top: 1px solid rgba(193, 193, 193, 0.3);
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  }
+
+  &__contacts-link {
+    padding: 22px 0;
+    @include line-clamps(18, 1, 2);
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: $title;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+
+    &--phone,
+    &--address {
+      background-position: left center;
+      background-repeat: no-repeat;
     }
 
-    &__items {
-        background-color: $white;
-        width: 83vw;
-        height: 100vh;
-        overflow: auto;
+    &--phone {
+      background-image: url("../../images/icon/burger-phone.svg");
     }
 
-    &__top {
-        padding: 24px 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &--address {
+      background-image: url("../images/icon/map.svg");
     }
 
-    &__logo {
-        fill: $green-900;
-        width: 200px;
-        height: 60px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
     }
+  }
 
-    &__close {
-        padding: 22px;
-        background-image: url("../../images/icon/close.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 18px 18px;
-    }
+  &__social-icon {
+    fill: $black;
+  }
 
-    &__authorization {
-        padding: 2px 15px;
-        background-color: $green-900;
-        text-align: center;
-    }
+  &__menu {
+    padding: 24px 15px;
+    column-count: 1;
+  }
 
-    &__inner {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        line-height: 1;
-        letter-spacing: 0.03em;
-        color: $white;
-
-        span {
-            margin: 0 12px;
-        }
-    }
-
-    &__link {
-        padding: 13px 0;
-        display: block;
-    }
-
-    &__icon {
-        margin-right: 15px;
-    }
-
-    &__catalog {
-        display: block;
-        width: 100%;
-    }
-
-    &__btn {
-        color: $dark-800;
-        font-size: 18px;
-        line-height: 1;
-
-        &::before {
-            display: none;
-        }
-    }
-
-    &__catalog-icon {
-        fill: $dark-800;
-    }
-
-    &__contacts {
-        flex-direction: column;
-        padding: 7px 15px;
-        border-top: 1px solid rgba(193, 193, 193, 0.3);
-        border-bottom: 1px solid rgba(193, 193, 193, 0.3);
-    }
-
-    &__contacts-link {
-        padding: 22px 0;
-        @include line-clamps(18, 1, 2);
-        letter-spacing: 0.03em;
-        text-transform: capitalize;
-        color: $title;
-        padding-left: 40px;
-        display: flex;
-        align-items: center;
-
-        &--phone,
-        &--address {
-            background-position: left center;
-            background-repeat: no-repeat;
-        }
-
-        &--phone {
-            background-image: url("../../images/icon/burger-phone.svg");
-        }
-
-        &--address {
-            background-image: url("../images/icon/map.svg");
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 8px;
-        }
-    }
-
-    &__social-icon {
-        fill: $black;
-    }
-
-    &__menu {
-        padding: 24px 15px;
-        column-count: 1;
-    }
-
-    &__menu-link {
-        padding: 12px 0;
-        @include line-clamps(18, 1, 2);
-        color: $dark-800;
-    }
+  &__menu-link {
+    padding: 13px 0;
+    font-size: 18px;
+    line-height: 1;
+    color: $dark-800;
+    max-height: 44px;
+    max-width: 100%;
+    margin-bottom: 0;
+    @include line-clamp();
+  }
 }

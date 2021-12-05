@@ -1,32 +1,32 @@
 .breadcrumbs {
-    padding: 24px 0;
-    background-color: $silver-100;
+  padding: 24px 0;
+  background-color: $silver-100;
 
-    &__list {
-        display: flex;
-        align-items: center;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-right: 10px;
+      margin-right: 7px;
+      position: relative;
+
+      &::before {
+        @include pseudo;
+        width: 6px;
+        height: 10px;
+        bottom: 6px;
+        right: 0;
+        @extend %properties-bg;
+        background-image: url("../images/icon/sort-arrow.svg");
+      }
     }
+  }
 
-    &__item {
-        &:not(:last-child) {
-            padding-right: 10px;
-            margin-right: 7px;
-            position: relative;
-
-            &::before {
-                @include pseudo;
-                width: 6px;
-                height: 10px;
-                bottom: 6px;
-                right: 0;
-                @extend %properties-bg;
-                background-image: url("../images/icon/sort-arrow.svg");
-            }
-        }
-    }
-
-    &__link {
-        line-height: 1.2;
-        letter-spacing: 0.03em;
-    }
+  &__link {
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
 }

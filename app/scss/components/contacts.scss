@@ -1,36 +1,36 @@
 .contacts {
-    &__link {
-        display: block;
-        text-transform: capitalize;
-        max-width: 250px;
-        @include line-clamps(14, 1.4, 2);
+  @include r($lg) {
+    order: -1;
+  }
 
-        &:not(:last-child) {
-            margin-bottom: 24px;
-        }
+  &__link {
+    display: block;
+    text-transform: capitalize;
+    max-width: 250px;
+    @include line-clamps(14, 1.4, 2);
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
     }
 
     @include r($lg) {
-        order: -1;
-
-        &__link:not(:last-child) {
-            margin-bottom: 0;
-        }
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
 
     @include r($md) {
-        &__link:not(:last-child) {
-            margin-bottom: 6px;
-        }
+      padding: 12px 0;
 
-        &__link {
-            padding: 12px 0;
-        }
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
     }
 
     @include r($sm) {
-        &__link:not(:last-child) {
-            margin-bottom: 2px;
-        }
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
     }
+  }
 }

@@ -1,217 +1,223 @@
 .footer {
-    background-color: $dark-800;
-    color: $white;
-    line-height: 1;
+  background-color: $dark-800;
+  color: $white;
+  line-height: 1;
 
-    &__content {
-        padding: 30px 0;
+  &__content {
+    padding: 30px 0;
+
+    @include r($sm) {
+      padding: 24px 0;
     }
+  }
 
-    &__logo {
-        margin-bottom: 30px;
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__feedback {
-        margin-right: 60px;
-    }
-
-    &__desc {
-        margin-bottom: 18px;
-        max-width: 300px;
-        @include line-clamps(14, 1.4, 3);
-
-        p {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-    }
-
-    &__form {
-        max-width: 305px;
-    }
-
-    &__input {
-        padding: 12px 140px 12px 12px;
-
-        &::placeholder {
-            line-height: 1;
-            color: #4f4f4f;
-            letter-spacing: normal;
-        }
-    }
-
-    &__btn {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        font-weight: 700;
-        padding: 12px 16px;
-        font-size: 12px;
-        text-transform: uppercase;
-        border-radius: 0 6px 6px 0;
-    }
-
-    &__contacts {
-        margin-right: 5px;
-    }
-
-    &__social {
-        margin-left: -8px;
-    }
-
-    &__bottom {
-        padding: 24px 0;
-        border-top: 1px solid rgba($white, 0.1);
-    }
-
-    &__bottom-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__copy {
-        display: block;
-        text-transform: uppercase;
-    }
-
-    @include r($xl) {
-        &__items {
-            column-count: 2;
-            column-gap: 60px;
-        }
-
-        &__feedback {
-            margin-right: 20px;
-        }
-    }
+  &__logo {
+    margin-bottom: 19px;
 
     @include r($lg) {
-        &__items {
-            column-count: 4;
-            padding: 24px 0;
-        }
-
-        &__inner {
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__feedback,
-        &__contacts {
-            width: 100%;
-            margin-right: 0;
-            position: relative;
-
-            &::after {
-                @include pseudo;
-                left: -15px;
-                right: -15px;
-            }
-        }
-
-        &__feedback {
-            padding-top: 24px;
-            order: 1;
-            text-align: center;
-
-            &::after {
-                top: 0;
-                border-top: 1px solid rgba($white, 0.1);
-            }
-        }
-
-        &__contacts {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 24px;
-
-            &::after {
-                bottom: 0;
-                border-bottom: 1px solid rgba($white, 0.1);
-            }
-        }
-
-        &__logo {
-            margin: 0 auto 24px;
-        }
-
-        &__desc {
-            max-width: 100%;
-            text-align: center;
-        }
-
-        &__form {
-            max-width: 80%;
-            margin: 0 auto;
-        }
-
-        &__copy {
-            order: 1;
-        }
+      margin: 0 auto 24px;
     }
 
     @include r($md) {
-        &__items {
-            column-count: 3;
-        }
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+  }
 
-        &__item {
-            &:not(:last-child) {
-                margin-bottom: 0px;
-            }
-        }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
 
-        &__bottom {
-            padding: 16px 0 24px;
-        }
+    @include r($lg) {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
-        &__contacts {
-            flex-direction: column;
-        }
+  &__feedback,
+  &__contacts {
+    @include r($lg) {
+      width: 100%;
+      margin-right: 0;
+      position: relative;
 
-        &__logo {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 12px;
-        }
+      &::after {
+        @include pseudo;
+        left: -15px;
+        right: -15px;
+      }
+    }
+  }
 
+  &__feedback {
+    margin-right: 60px;
+
+    @include r($xl) {
+      margin-right: 20px;
+    }
+
+    @include r($lg) {
+      padding-top: 24px;
+      order: 1;
+      text-align: center;
+      margin-right: 0;
+
+      &::after {
+        top: 0;
+        border-top: 1px solid rgba($white, 0.1);
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 18px;
+    max-width: 300px;
+    @include line-clamps(14, 1.4, 3);
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+      text-align: center;
     }
 
     @include r($sm) {
-        &__content {
-            padding: 24px 0;
-        }
-
-        &__items {
-            column-count: 2;
-            column-gap: 30px;
-            padding: 20px 0;
-        }
-
-        &__form {
-            max-width: 100%;
-        }
-
-        &__desc {
-            text-align: left;
-        }
-
-        &__btn {
-            padding: 12px;
-        }
-
-        &__bottom-inner {
-            flex-direction: column;
-        }
+      text-align: left;
     }
+  }
+
+  &__form {
+    max-width: 310px;
+
+    @include r($lg) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    @include r($sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 12px 140px 12px 12px;
+
+    &::placeholder {
+      line-height: 1;
+      color: #4f4f4f;
+      letter-spacing: normal;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-weight: 700;
+    padding: 12px 13px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 0 6px 6px 0;
+
+    @include r($sm) {
+      padding: 12px;
+    }
+  }
+
+  &__items {
+    @include r($xl) {
+      column-count: 2;
+      column-gap: 60px;
+    }
+
+    @include r($lg) {
+      column-count: 4;
+      padding: 24px 0;
+    }
+
+    @include r($md) {
+      column-count: 3;
+    }
+
+    @include r($sm) {
+      column-count: 2;
+      column-gap: 30px;
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    @include r($md) {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__item-link {
+    @include r($lg) {
+      margin-bottom: 0;
+      padding: 12px 0;
+    }
+  }
+
+  &__contacts {
+    margin-right: 5px;
+    margin-top: 5px;
+
+    @include r($lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+
+      &::after {
+        bottom: 0;
+        border-bottom: 1px solid rgba($white, 0.1);
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__social {
+    margin-left: -8px;
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    border-top: 1px solid rgba($white, 0.1);
+
+    @include r($md) {
+      padding: 16px 0 24px;
+    }
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    display: block;
+    text-transform: uppercase;
+
+    @include r($lg) {
+      order: 1;
+    }
+  }
 }
