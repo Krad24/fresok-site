@@ -322,7 +322,6 @@
   &__catalog,
   &__user-item:first-child,
   &__sr,
-  &__num,
   &__contacts:last-child {
     @include r($lg) {
       display: none;
@@ -353,6 +352,17 @@
   }
 
   &__user-heart {
+    @include r($lg) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include r($sm) {
+      display: none;
+    }
+  }
+
+  &__num{
     @include r($sm) {
       display: none;
     }

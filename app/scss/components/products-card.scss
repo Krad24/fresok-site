@@ -154,7 +154,6 @@
 
   &__item {
     display: block;
-
     &--old {
       color: $silver-600;
       margin-bottom: 3px;
@@ -170,6 +169,10 @@
         background-color: $silver-600;
         transform: rotate(-15deg);
       }
+    }
+
+    span {
+      margin-left: 5px;
     }
   }
 

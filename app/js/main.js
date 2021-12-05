@@ -148,18 +148,17 @@ $(function () {
 
   //catalog-filter-sort
 
-  $('.catalog__btn-vertically').on('click', function () {
+  $('.catalog__btn').on('click', function () {
     $('.catalog__btn').removeClass('catalog__btn--active');
     $(this).addClass('catalog__btn--active');
-    $('.catalog__cards').removeClass('catalog__cards--active');
-    $('.catalog__vertically').addClass('catalog__cards--active');
   })
 
-  $('.catalog__btn-horizontally').on('click', function () {
-    $('.catalog__btn').removeClass('catalog__btn--active');
-    $(this).addClass('catalog__btn--active');
-    $('.catalog__cards').removeClass('catalog__cards--active');
-    $('.catalog__horizontally').addClass('catalog__cards--active');
+  $('.btn-horizontally').on('click', function () {
+    $('.catalog__cards').addClass('cards-horizontally');
+  })
+
+  $('.btn-vertically').on('click', function () {
+    $('.catalog__cards').removeClass('cards-horizontally');
   })
 
   //catalog-sort
