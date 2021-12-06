@@ -5,11 +5,19 @@
 @import "libs";
 @import "global";
 
+@import 'components/btn-close.scss';
+
 @import 'components/form-search.scss';
 
 @import 'components/logo.scss';
 
 @import 'components/user-nav.scss';
+
+@import 'components/icon-heart.scss';
+
+@import 'components/icon-cart.scss';
+
+@import 'components/icon-login.scss';
 
 @import 'components/page-index/slider-top.scss';
 
@@ -46,3 +54,9 @@
 @import 'components/burger.scss';
 
 @import 'components/footer.scss';
+
+@import 'components/breadcrumbs.scss';
+
+@import 'components/pagination.scss';
+
+@import 'components/page-catalog/catalog.scss';

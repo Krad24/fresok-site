@@ -1,22 +1,20 @@
 .status {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    margin-bottom: 9px;
-    text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    &--in {
-        color: $green-900;
-    }
+  &__in {
+    color: $green-900;
+  }
 
-    &--few {
-        color: $red-900;
-    }
+  &__few {
+    color: $red-900;
+  }
 
-    &--out {
-        color: $silver-600;
-    }
+  &__out {
+    color: $silver-600;
+  }
 }

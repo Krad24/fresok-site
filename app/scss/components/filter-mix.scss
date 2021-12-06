@@ -1,61 +1,61 @@
 .filter-mix {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 25px;
-        }
+  @include r($md) {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  @include r($sm) {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+      margin: 0 13px; 
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $default;
+    position: relative;
+
+    &.mixitup-control-active {
+      &::after {
+        @include pseudo;
+        width: 100%;
+        height: 3px;
+        border-bottom: 3px solid $green-200;
+      }
     }
 
-    &__button {
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 1.4;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: $default;
-
-        &.mixitup-control-active {
-            border-bottom: 3px solid $green-200;
-        }
-
-        &:hover {
-            color: #63a60e;
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 3px $green-200;
-            border-radius: 3px;
-        }
-
-        &:active {
-            color: $default;
-            box-shadow: none;
-            border-radius: 0;
-            border-bottom: 3px solid $green-200;
-        }
+    &:hover {
+      color: #63a60e;
     }
 
-    @include r($md) {
-        margin-bottom: 30px;
-        flex-wrap: wrap;
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
 
-        &__item {
-            margin-bottom: 0;
-        }
+    &:active {
+      color: $default;
+      box-shadow: none;
+      border-radius: 0;
+      border-bottom: 3px solid $green-200;
+    }
 
-        &__button {
-            padding: 10px 0;
-        }
+    @include r($md){
+      padding: 10px 0;
     }
 
     @include r($sm) {
-        margin-bottom: 10px;
-
-        &__button {
-            font-size: 14px;
-        }
+      font-size: 14px;
     }
+  }
 }
