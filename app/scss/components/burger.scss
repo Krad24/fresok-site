@@ -1,10 +1,9 @@
 .burger {
-  overflow: auto;
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 5;
+  z-index: 666;
   transform: translateX(-120%);
   transition: transform 0.5s;
 
@@ -18,8 +17,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, 0.15);
     z-index: -1;
+  }
+
+  &__close {
+    top: 39px;
+    right: 18px;
   }
 
   &__items {
@@ -43,14 +47,6 @@
     height: 60px;
   }
 
-  &__close {
-    padding: 22px;
-    background-image: url("../../images/icon/close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 18px 18px;
-  }
-
   &__authorization {
     padding: 2px 4px;
     background-color: $green-900;
@@ -71,8 +67,8 @@
     padding: 0 9px;
     position: relative;
 
-    &:not(:last-child){
-      &::after{
+    &:not(:last-child) {
+      &::after {
         @include pseudo;
         height: 18px;
         width: 2px;

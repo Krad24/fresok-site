@@ -15,7 +15,8 @@ $(function () {
         arrows: false,
         autoplay: true,
       }
-    }, ]
+    },
+    ]
   });
 
   $('.slider-brands').slick({
@@ -25,25 +26,25 @@ $(function () {
     autoplay: true,
 
     responsive: [{
-        breakpoint: 993,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
 
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
 
-      {
-        breakpoint: 577,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
+    {
+      breakpoint: 577,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
     ]
   });
 
@@ -54,12 +55,26 @@ $(function () {
     $('body').addClass('lock');
   });
 
+  //button-filter-sort
+
+  $('.catalog__btn-filter').on('click', function () {
+    $('.catalog__items').addClass('catalog__items--active');
+    $('body').addClass('lock');
+  });
+
+  //close burger and catalog-filters
+
   $('body').on('click', function (e) {
-    if (e.target.className == 'burger burger--active' || e.target.className == 'burger__close') {
+    console.log(e);
+    if (e.target.className == 'body lock' || e.target.className == 'btn-close' 
+    || e.target.className == 'burger__close btn-close') {
       $('.burger').removeClass('burger--active');
+      $('.catalog__items').removeClass('catalog__items--active');
       $('body').removeClass('lock');
     }
   });
+
+  //form in header
 
   $('.header__user-search').on('click', function () {
     $('.header__form').toggleClass('header__form--active');
@@ -69,14 +84,14 @@ $(function () {
 
   if ($(window).width() < 576) {
     $(".header__form-input").attr("placeholder", "Я ищу...");
-  } else(
+  } else (
     $(".header__form-input").attr("placeholder", "Найти в магазине ...")
   );
 
   window.addEventListener("resize", function () {
     if ($(window).width() < 576) {
       $(".header__form-input").attr("placeholder", "Я ищу...");
-    } else(
+    } else (
       $(".header__form-input").attr("placeholder", "Найти в магазине ...")
     );
   });
@@ -168,6 +183,7 @@ $(function () {
   for (var i = 0; i < elem.length; i++) {
     elem[i].style.width = 'auto';
   }
+
 
   //filter-mix
 

@@ -1,6 +1,14 @@
 .catalog {
   padding: 48px 0 72px;
 
+  @include r($lg) {
+    padding: 40px 0 48px;
+  }
+
+  @include r($md) {
+    padding: 30px 0 36px;
+  }
+
   &__title {
     font-family: "Ruda", sans-serif;
     font-weight: 700;
@@ -9,6 +17,20 @@
     letter-spacing: 0.03em;
     color: $title;
     margin-bottom: 48px;
+
+    @include r($lg) {
+      margin-bottom: 40px;
+    }
+
+    @include r($md) {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
   }
 
   &__inner {
@@ -17,13 +39,30 @@
 
   &__content {
     width: 100%;
-    margin-bottom: 48px;
   }
 
-  &__filters {
+  &__items {
+    margin-right: 24px;
     max-width: 300px;
     width: 100%;
-    margin-right: 24px;
+
+    @include r($xl) {
+      padding: 76px 21px 76px 0;
+      height: 100vh;
+      margin-right: 0;
+      position: fixed;
+      top:0;
+      left: 0;
+      background-color: $white;
+      z-index: 666;
+      overflow: auto;
+      transform: translateX(-150%);
+      transition: transform 0.5s;
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
   }
 
   &__filter {
@@ -82,7 +121,7 @@
     opacity: 0;
   }
 
-  &__items {
+  &__filter-items {
     padding: 18px;
     height: 300px;
     overflow: auto;
@@ -132,7 +171,7 @@
     clip: rect(0 0 0 0);
     padding-left: 36px;
 
-    &:checked+.catalog__checkbox {
+    &:checked + .catalog__checkbox {
       background-image: url("../../../images/icon/tick.svg");
       background-position: center;
       background-repeat: no-repeat;
@@ -154,7 +193,6 @@
     &:hover {
       border-color: #505050;
     }
-
   }
 
   &__controls {
@@ -193,11 +231,15 @@
     }
   }
 
-  &__item {
-
-
+  &__sort-item {
     &:not(:last-child) {
       margin-right: 15px;
+    }
+
+    @include r($sm) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -205,6 +247,15 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 48px;
+
+    @include r($lg) {
+      margin-bottom: 40px;
+    }
+
+    @include r($md) {
+      margin-bottom: 30px;
+      justify-content: flex-start;
+    }
   }
 
   &__btn {
@@ -218,11 +269,18 @@
     }
   }
 
+  .btn-horizontally,
+  .btn-vertically {
+    @include r($lg){
+      display: none;
+    }
+  }
+
   &__btn-filter {
     @include r($xl) {
       width: 47px;
       height: 47px;
-      background-image: url('../../../images/icon/filter.svg');
+      background-image: url("../../../images/icon/filter.svg");
       background-size: 32px 36px;
       background-repeat: no-repeat;
       background-position: center;
@@ -243,6 +301,21 @@
     grid-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 
+    @include r($lg) {
+      grid-gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    @include r($md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
+
+    @include r($sm) {
+      grid-gap: 5px;
+      margin-bottom: 24px;
+    }
+
     &.cards-horizontally {
       grid-template-columns: repeat(2, 1fr);
 
@@ -250,6 +323,10 @@
         max-width: 466px;
         width: 100%;
         padding: 6px;
+
+        @include r($xl) {
+          max-width: 100%;
+        }
       }
 
       .catalog-card__link {
@@ -266,6 +343,10 @@
       .catalog-card__img {
         width: 200px;
         height: 144px;
+
+        @include r($exl) {
+          width: 160px;
+        }
       }
 
       .catalog-card__info {
@@ -275,6 +356,10 @@
       .catalog-card__desc {
         max-width: 178px;
         margin: 0 9px 18px 0;
+
+        @include r($exl) {
+          max-width: 170px;
+        }
       }
 
       .catalog-card__heart {
@@ -307,6 +392,16 @@
     }
   }
 
+  .catalog-card {
+    @include r($xl) {
+      max-width: 100%;
+    }
+
+    @include r($sm) {
+      padding: 59px 7px 12px;
+    }
+  }
+
   &__card-top {
     display: flex;
     justify-content: space-between;
@@ -321,6 +416,36 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @include r($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-btn {
+    @include r($md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__pagination-btn,
+  &__pagination-item {
+    @include r($sm) {
+      display: none;
+    }
+  }
+
+  &__rating-num {
+    @include r($sm) {
+      font-size: 10px;
+      padding-right: 14px;
+
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+    }
   }
 
   //select
@@ -350,6 +475,13 @@
     letter-spacing: 0.03em;
     font-size: 14px;
     line-height: 1.2;
+
+    @include r($sm) {
+      padding: 16px 26px 16px 6px;
+      font-size: 12px;
+      max-width: 155px;
+      @include line-clamp;
+    }
   }
 
   .jq-selectbox__trigger {
@@ -363,10 +495,10 @@
   .jq-selectbox__trigger-arrow {
     position: absolute;
     top: 20px;
-    right: 15px;
+    right: 9px;
     width: 11px;
     height: 7px;
-    background-image: url('../../../images/icon/sort-arrow.svg');
+    background-image: url("../../../images/icon/sort-arrow.svg");
     @extend %properties-bg;
     transform: rotate(180deg);
   }

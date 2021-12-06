@@ -5,6 +5,8 @@
 @import "libs";
 @import "global";
 
+@import 'components/btn-close.scss';
+
 @import 'components/form-search.scss';
 
 @import 'components/logo.scss';
@@ -55,6 +57,6 @@
 
 @import 'components/breadcrumbs.scss';
 
-@import 'components/page-catalog/catalog.scss';
-
 @import 'components/pagination.scss';
+
+@import 'components/page-catalog/catalog.scss';

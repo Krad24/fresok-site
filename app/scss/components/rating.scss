@@ -17,11 +17,7 @@
       width: 16px;
       height: 16px;
       background-image: url('../images/icon/rating-star.svg');
+      @extend %properties-bg;
     }
-  }
-
-  &__img {
-    width: 16px;
-    height: 16px;
   }
 }

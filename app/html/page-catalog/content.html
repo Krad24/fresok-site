@@ -2,186 +2,191 @@
   <div class="container">
     <h2 class="catalog__title">Каталог товаров</h2>
     <div class="catalog__inner">
-      <aside class="catalog__filters">
-        <div class="catalog__filter">
-          <h3 class="catalog__filter-title">Категории</h3>
-          <div class="catalog__filter-content">
-            <ul class="catalog__items">
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  овощи и фрукты
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  бакалея
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  молочные продукты
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  хлеб
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  мясо
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  колбаса
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  рыба
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-              <li class="catalog__item">
-                <a class="catalog__link" href="#">
-                  алкоголь
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="catalog__filter">
-          <h3 class="catalog__filter-title">Предложения</h3>
-          <div class="catalog__filter-content ">
-            <form class="catalog__form" action="">
-              <label class="catalog__lable">
-                <input class="catalog__input" type="checkbox">
-                <span class="catalog__checkbox"></span>
-                Со скидкой
-              </label>
-              <label class="catalog__lable">
-                <input class="catalog__input" type="checkbox" checked>
-                <span class="catalog__checkbox"></span>
-                Новинка
-              </label>
-              <label class="catalog__lable">
-                <input class="catalog__input" type="checkbox">
-                <span class="catalog__checkbox"></span>
-                Хит
-              </label>
-            </form>
-          </div>
-        </div>
-        <div class="catalog__filter">
-          <h3 class="catalog__filter-title">Бренд</h3>
-          <div class="catalog__filter-content">
-            <form class="catalog__form" action="">
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">CocaCola</span>
-              </label>
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">Pepsi</span>
-              </label>
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">Sprite</span>
-              </label>
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">Fanta</span>
-              </label>
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">RedBull</span>
-              </label>
-              <label class="catalog__lable">
-                <div class="catalog__filter-box">
-                  <input class="catalog__input" type="checkbox">
-                  <span class="catalog__checkbox"></span>
-                </div>
-                <span class="catalog__name">Dr Pepper</span>
-              </label>
-            </form>
-          </div>
-        </div>
-        <div class="catalog__filter">
-          <h3 class="catalog__filter-title">Цена</h3>
-          <div class="catalog__filter-content">
-            <div class="catalog__controls">
-              <lable class="catalog__from" for="">
-                <span>от</span><input class="catalog__from-input" type="text" value="0"><span>₽</span>
-              </lable>
-              <label class="catalog__to" for="">
-                <span>до</span><input class="catalog__to-input" type="text" value="0"><span>₽</span>
-              </label>
+      <aside class="catalog__items">
+        <button class="btn-close" type="button">
+          <span class="sr-only">кнопка для закрытия меню</span>
+        </button>
+        <ul class="catalog__filters">
+          <li class="catalog__filter">
+            <h3 class="catalog__filter-title">Категории</h3>
+            <div class="catalog__filter-content">
+              <ul class="catalog__filter-items">
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    овощи и фрукты
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    бакалея
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    молочные продукты
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    хлеб
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    мясо
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    колбаса
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    рыба
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    алкоголь
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="catalog__range">
-              <input class="catalog__range-input" type="text" value="" data-min="0" data-max="1500" data-from="100"
-                data-to="1000">
+          </li>
+          <li class="catalog__filter">
+            <h3 class="catalog__filter-title">Предложения</h3>
+            <div class="catalog__filter-content ">
+              <form class="catalog__form" action="">
+                <label class="catalog__lable">
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Со скидкой
+                </label>
+                <label class="catalog__lable">
+                  <input class="catalog__input" type="checkbox" checked>
+                  <span class="catalog__checkbox"></span>
+                  Новинка
+                </label>
+                <label class="catalog__lable">
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Хит
+                </label>
+              </form>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="catalog__filter">
+            <h3 class="catalog__filter-title">Бренд</h3>
+            <div class="catalog__filter-content">
+              <form class="catalog__form" action="">
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">CocaCola</span>
+                </label>
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">Pepsi</span>
+                </label>
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">Sprite</span>
+                </label>
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">Fanta</span>
+                </label>
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">RedBull</span>
+                </label>
+                <label class="catalog__lable">
+                  <div class="catalog__filter-box">
+                    <input class="catalog__input" type="checkbox">
+                    <span class="catalog__checkbox"></span>
+                  </div>
+                  <span class="catalog__name">Dr Pepper</span>
+                </label>
+              </form>
+            </div>
+          </li>
+          <li class="catalog__filter">
+            <h3 class="catalog__filter-title">Цена</h3>
+            <div class="catalog__filter-content">
+              <div class="catalog__controls">
+                <lable class="catalog__from" for="">
+                  <span>от</span><input class="catalog__from-input" type="text" value="0"><span>₽</span>
+                </lable>
+                <label class="catalog__to" for="">
+                  <span>до</span><input class="catalog__to-input" type="text" value="0"><span>₽</span>
+                </label>
+              </div>
+              <div class="catalog__range">
+                <input class="catalog__range-input" type="text" value="" data-min="0" data-max="1500" data-from="100"
+                  data-to="1000">
+              </div>
+            </div>
+          </li>
+        </ul>
       </aside>
 
       <div class="catalog__content">
         <ul class="catalog__sort">
-          <li class="catalog__item">
+          <li class="catalog__sort-item">
             <button class="catalog__btn catalog__btn-filter"></button>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__sort-item">
             <select class="catalog__select" name="caterogy" id="caterogy">
               <option value="1">По названию</option>
               <option value="2">По популярности</option>
@@ -190,7 +195,7 @@
               <option value="3">По алфавиту</option>
             </select>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__sort-item">
             <select class="catalog__select" name="number" id="number">
               <option value="1">по 12</option>
               <option value="2">по 18</option>
@@ -199,14 +204,14 @@
               <option value="3">по 36</option>
             </select>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__sort-item">
             <button class="catalog__btn btn-horizontally">
               <svg class="catalog__img">
                 <use xlink:href="images/sprite.svg#horizontally"></use>
               </svg>
             </button>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__sort-item">
             <button class="catalog__btn btn-vertically catalog__btn--active">
               <svg class="catalog__img">
                 <use xlink:href="images/sprite.svg#vertically"></use>
@@ -237,7 +242,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">3.5</span>
+                    <span class="rating__num catalog__rating-num">3.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">
@@ -282,7 +287,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Лимон, 1кг</h3>
@@ -323,7 +328,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Питахайя красная с белой мякотью, 1шт</h3>
@@ -364,7 +369,7 @@
                     Нет наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Морковь молодая с бабушкиной грядки, 1кг</h3>
@@ -405,7 +410,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">
@@ -451,7 +456,7 @@
                     заканчивается
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Кофе с коноплей органический Caffé Salomoni 250г
@@ -493,7 +498,7 @@
                     заканчивается
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Перец оранжевый, 1кг</h3>
@@ -533,7 +538,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">
@@ -578,7 +583,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Ананас, 1 кг</h3>
@@ -622,7 +627,7 @@
                     Нет наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Морковь молодая с бабушкиной грядки, 1кг</h3>
@@ -663,7 +668,7 @@
                     В наличии
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Напиток сокосодержащий Sanpellegrino Aranciata
@@ -708,7 +713,7 @@
                     заканчивается
                   </span>
                   <div class="rating">
-                    <span class="rating__num">4.5</span>
+                    <span class="rating__num catalog__rating-num">4.5</span>
                   </div>
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Кофе с коноплей органический Caffé Salomoni 250г
@@ -732,7 +737,7 @@
         </ul>
 
         <div class="catalog__bottom">
-          <button class="button" type="button">Показать еще</button>
+          <button class="button catalog__bottom-btn" type="button">Показать еще</button>
           <ul class="pagination">
             <li class="pagination__item">
               <button class="pagination__btn" type="button">
@@ -741,15 +746,18 @@
                 </svg>
               </button>
             </li>
-            <li class="pagination__item"><button class="pagination__btn pagination__btn--active"
-                type="button">1</button>
+            <li class="pagination__item">
+              <button class="pagination__btn pagination__btn--active" type="button">1</button>
             </li>
-            <li class="pagination__item"><button class="pagination__btn" type="button">2</button>
+            <li class="pagination__item catalog__pagination-item">
+              <button class="pagination__btn catalog__pagination-btn" type="button">2</button>
             </li>
             <li class="pagination__item"><span>...</span></li>
-            <li class="pagination__item"><button class="pagination__btn" type="button">9</button>
+            <li class="pagination__item catalog__pagination-item">
+              <button class="pagination__btn catalog__pagination-btn" type="button">9</button>
             </li>
-            <li class="pagination__item"><button class="pagination__btn" type="button">10</button>
+            <li class="pagination__item">
+              <button class="pagination__btn" type="button">10</button>
             </li>
             <li class="pagination__item">
               <button class="pagination__btn" type="button">
