@@ -319,6 +319,10 @@
     &.cards-horizontally {
       grid-template-columns: repeat(2, 1fr);
 
+      .catalog__card-top {
+        margin-top: 0;
+      }
+
       .catalog-card {
         max-width: 466px;
         width: 100%;
@@ -367,28 +371,6 @@
         right: 12px;
         transform: translateY(-50%);
       }
-
-      .catalog-card__price {
-        display: flex;
-        margin-right: 5px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 1;
-        letter-spacing: 0.03em;
-      }
-
-      .catalog-card__old {
-        font-size: 12px;
-        font-weight: 400;
-        order: 1;
-        margin: 0 0 0 12px;
-        align-self: flex-end;
-      }
-
-      .catalog-card__value {
-        font-size: 14px;
-        align-self: flex-end;
-      }
     }
   }
 
@@ -400,6 +382,10 @@
     @include r($sm) {
       padding: 59px 7px 12px;
     }
+
+    &__link {
+      margin-bottom: 0;
+    }
   }
 
   &__card-top {
@@ -407,6 +393,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 9px;
+    margin-top: -6px;
+    position: relative;
   }
 
   &__status {

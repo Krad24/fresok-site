@@ -92,7 +92,7 @@
           <li class="catalog__filter">
             <h3 class="catalog__filter-title">Предложения</h3>
             <div class="catalog__filter-content ">
-              <form class="catalog__form" action="">
+              <form class="catalog__form" action="#">
                 <label class="catalog__lable">
                   <input class="catalog__input" type="checkbox">
                   <span class="catalog__checkbox"></span>
@@ -114,48 +114,36 @@
           <li class="catalog__filter">
             <h3 class="catalog__filter-title">Бренд</h3>
             <div class="catalog__filter-content">
-              <form class="catalog__form" action="">
+              <form class="catalog__form" action="#">
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">CocaCola</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  CocaCola
                 </label>
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">Pepsi</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Pepsi
                 </label>
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">Sprite</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Sprite
                 </label>
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">Fanta</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Fanta
                 </label>
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">RedBull</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  RedBull
                 </label>
                 <label class="catalog__lable">
-                  <div class="catalog__filter-box">
-                    <input class="catalog__input" type="checkbox">
-                    <span class="catalog__checkbox"></span>
-                  </div>
-                  <span class="catalog__name">Dr Pepper</span>
+                  <input class="catalog__input" type="checkbox">
+                  <span class="catalog__checkbox"></span>
+                  Dr Pepper
                 </label>
               </form>
             </div>
@@ -164,17 +152,17 @@
             <h3 class="catalog__filter-title">Цена</h3>
             <div class="catalog__filter-content">
               <div class="catalog__controls">
-                <lable class="catalog__from" for="">
+                <lable class="catalog__from">
                   <span>от</span><input class="catalog__from-input" type="text" value="0"><span>₽</span>
                 </lable>
-                <label class="catalog__to" for="">
+                <label class="catalog__to">
                   <span>до</span><input class="catalog__to-input" type="text" value="0"><span>₽</span>
                 </label>
               </div>
-              <div class="catalog__range">
+              <label class="catalog__range"><span class="sr-only">диапазон цен</span>
                 <input class="catalog__range-input" type="text" value="" data-min="0" data-max="1500" data-from="100"
                   data-to="1000">
-              </div>
+              </label>
             </div>
           </li>
         </ul>
@@ -249,12 +237,12 @@
                   Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л
                 </h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
-                    <span class="products-card__item products-card__item--old catalog-card__old">
+                  <div class="products-card__price">
+                    <span class="products-card__item products-card__item--old">
                       149<span>₽</span>
                     </span>
                     <span class="products-card__item">
-                      99<span class="catalog-card__value">₽</span>
+                      99<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -292,9 +280,9 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Лимон, 1кг</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      199<span class="catalog-card__value">₽</span>
+                      199<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -333,9 +321,9 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Питахайя красная с белой мякотью, 1шт</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      1999<span class="catalog-card__value">₽</span>
+                      1999<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -374,9 +362,9 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Морковь молодая с бабушкиной грядки, 1кг</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      49<span class="catalog-card__value">₽</span>
+                      49<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -417,12 +405,12 @@
                   Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный освежающий
                 </h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
-                    <span class="products-card__item products-card__item--old catalog-card__old">
+                  <div class="products-card__price">
+                    <span class="products-card__item products-card__item--old">
                       299<span>₽</span>
                     </span>
                     <span class="products-card__item">
-                      199<span class="catalog-card__value">₽</span>
+                      199<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -462,9 +450,9 @@
                 <h3 class="products-card__desc catalog-card__desc">Кофе с коноплей органический Caffé Salomoni 250г
                 </h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      877<span class="catalog-card__value">₽</span>
+                      877<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -503,9 +491,9 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Перец оранжевый, 1кг</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      349<span class="catalog-card__value">₽</span>
+                      349<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -546,9 +534,9 @@
                   1 шт
                 </h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      600<span class="catalog-card__value">₽</span>
+                      600<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -588,12 +576,12 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Ананас, 1 кг</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
-                    <span class="products-card__item products-card__item--old catalog-card__old">
+                  <div class="products-card__price">
+                    <span class="products-card__item products-card__item--old">
                       1999<span>₽</span>
                     </span>
                     <span class="products-card__item">
-                      999<span class="catalog-card__value">₽</span>
+                      999<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -632,9 +620,9 @@
                 </div>
                 <h3 class="products-card__desc catalog-card__desc">Морковь молодая с бабушкиной грядки, 1кг</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      49<span class="catalog-card__value">₽</span>
+                      49<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -674,12 +662,12 @@
                 <h3 class="products-card__desc catalog-card__desc">Напиток сокосодержащий Sanpellegrino Aranciata
                   Orange Красный апельсин безалкогольный освежающий</h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
-                    <span class="products-card__item products-card__item--old catalog-card__old">
+                  <div class="products-card__price">
+                    <span class="products-card__item products-card__item--old">
                       299<span>₽</span>
                     </span>
                     <span class="products-card__item">
-                      199<span class="catalog-card__value">₽</span>
+                      199<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
@@ -719,9 +707,9 @@
                 <h3 class="products-card__desc catalog-card__desc">Кофе с коноплей органический Caffé Salomoni 250г
                 </h3>
                 <div class="products-card__bottom">
-                  <div class="products-card__price catalog-card__price">
+                  <div class="products-card__price">
                     <span class="products-card__item">
-                      877<span class="catalog-card__value">₽</span>
+                      877<span>₽</span>
                     </span>
                   </div>
                   <button class="products-card__cart button" type="button">
