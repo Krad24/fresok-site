@@ -48,6 +48,28 @@ $(function () {
     ]
   });
 
+  $('.product-page__slider-top').slick({
+      prevArrow: '<button type="button" class="product-page__arrows product-page__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
+      nextArrow: '<button type="button" class="product-page__arrows product-page__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
+  });
+
+  $('.slider-card__items').slick({
+    prevArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
+    nextArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
+});
+
+  //star-rating
+
+  $(".star-rating").rateYo({
+    starWidth: "16px",
+    "starSvg": '<svg class="star-rating__img"><use xlink:href="../images/sprite.svg#star"></use></svg>',
+    normalFill: "rgba(193,193,193,0.3)",
+    ratedFill: "#FFB800",
+    fullStar: true,
+    readOnly: true,
+    spacing: "6px",
+  });
+
   //burger
 
   $('.header__burger-btn').on('click', function () {
@@ -178,7 +200,8 @@ $(function () {
 
   //catalog-sort
 
-  $('.catalog__select').styler({});
+  $('.product-page__input, .catalog__select').styler();
+
   let elem = document.getElementsByClassName('jq-selectbox__select-text');
   for (var i = 0; i < elem.length; i++) {
     elem[i].style.width = 'auto';
