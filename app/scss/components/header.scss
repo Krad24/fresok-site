@@ -134,13 +134,22 @@
 
   &__logo {
     margin-right: 24px;
+    display: block;
 
     @include r($xl) {
       margin-right: 15px;
     }
 
-    @include r($lg) {
-      padding: 2px 4px;
+    @include r($md) {
+      padding: 2px 3px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__logo-img {
+    @include r($md) {
+      width: 38px;
+      height: 40px;
     }
   }
 
@@ -362,7 +371,7 @@
     }
   }
 
-  &__num{
+  &__num {
     @include r($sm) {
       display: none;
     }

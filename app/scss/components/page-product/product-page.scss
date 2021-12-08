@@ -2,6 +2,14 @@
   &__inner {
     padding: 48px 0 64px;
     border-bottom: 1px solid $silver-600;
+
+    @include r($md) {
+      padding: 30px 0 42px;
+    }
+
+    @include r($sm) {
+      padding: 30px 0 30px;
+    }
   }
 
   &__card {
@@ -9,6 +17,11 @@
     max-width: 100%;
     padding: 0;
     border: none;
+
+    @include r($lg) {
+      display: block;
+      padding: 92px 0 0;
+    }
   }
 
   &__slider-top {
@@ -21,6 +34,12 @@
 
     @include r($xl) {
       max-width: 430px;
+    }
+
+    @include r($lg) {
+      padding: 16px 37px;
+      margin: 0 0 76px 0;
+      max-width: 100%;
     }
   }
 
@@ -59,6 +78,11 @@
 
   &__img {
     margin: 0 auto;
+
+    @include r($md) {
+      width: 270px;
+      height: 270px;
+    }
   }
 
   &__content {
@@ -74,15 +98,25 @@
     letter-spacing: 0.03em;
     color: $title;
     margin-bottom: 64px;
+    @include line-clamps(32, 1.2, 2);
 
     @include r($lg) {
       font-size: 26px;
+      @include line-clamps(26, 1.2, 2);
+      position: absolute;
+      top: 0;
+      margin-bottom: 0;
     }
   }
 
   &__badges {
     top: -50px;
     left: 8px;
+
+    @include r($lg) {
+      top: -48px;
+      left: 4px;
+    }
   }
 
   &__badges-item {
@@ -96,6 +130,11 @@
     align-items: center;
     margin-bottom: 30px;
     position: relative;
+
+    @include r($sm) {
+      display: block;
+      margin-bottom: 24px;
+    }
   }
 
   &__top-box {
@@ -116,12 +155,20 @@
 
   &__status {
     font-size: 16px;
+
+    @include r($sm) {
+      margin-top: 18px;
+    }
   }
 
   &__price {
     display: flex;
     align-items: flex-end;
     margin-bottom: 60px;
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__price-item {
@@ -156,6 +203,14 @@
     display: flex;
     align-items: center;
     margin-left: 18px;
+
+    @include r($md) {
+      border: none;
+    }
+
+    @include r($sm) {
+      font-size: 0;
+    }
   }
 
   &__liked {
@@ -172,6 +227,10 @@
     margin-right: 13px;
     width: 24px;
     height: 24px;
+
+    @include r($sm) {
+      margin-right: 0;
+    }
   }
 
   &__info-title {
@@ -222,541 +281,12 @@
       text-decoration-line: underline;
       color: #4d800c;
     }
-  }
-}
-
-.product-tabs {
-  max-width: 690px;
-  margin: 0 auto;
-  padding-bottom: 72px;
-
-  @include r($sm) {
-    padding-bottom: 48px;
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-    align-items: center;
-    margin-bottom: 48px;
-
-    @include r($sm) {
-      padding: 0;
-      margin-bottom: 30px;
-    }
-  }
-
-  &__item {
-    padding-top: 16px;
-  }
-
-  &__link {
-    font-family: "Ruda";
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: $title;
-    padding-top: 16px;
-    position: relative;
-    transition: color 0.5s;
-
-    &--active {
-      color: $green-900;
-
-      &::before {
-        @include pseudo;
-        top: 0;
-        width: 100%;
-        height: 3px;
-        background-color: $green-900;
-      }
-    }
-
-    &:hover {
-      color: $green-900;
-    }
 
     @include r($md) {
-      padding: 16px 0 8px;
-      font-size: 16px;
-    }
-
-    @include r($sm) {
-      padding: 17px 0 10px;
-      font-size: 14px;
-    }
-  }
-
-  &__content-item {
-    display: none;
-
-    &.product-tabs__content-item--active {
-      display: block;
-    }
-  }
-
-  &__text {
-    font-size: 16px;
-    line-height: 1.6;
-
-    p {
-      &:not(:last-child) {
-        margin-bottom: 25px;
-      }
-    }
-
-    span {
-      font-weight: 700;
-    }
-
-    &--desc {
-      color: #4f4f4f;
-    }
-
-    &--char {
-      p {
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-
-  &__title {
-    font-family: "Ruda";
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $title;
-    margin-bottom: 48px;
-
-    @include r($sm) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__reviews {
-    margin-bottom: 72px;
-
-    @include r($md){
-      margin-bottom: 48px;
-    }
-
-    @include r($sm){
-      margin-bottom: 30px;
-    }
-  }
-
-  &__reviews-item {
-    &:not(:last-child) {
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-      position: relative;
-
-      &::after {
-        @include pseudo;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $silver-600;
-      }
-    }
-
-    @include r($sm) {
-      &:not(:last-child) {
-        padding-bottom: 18px;
-        margin-bottom: 28px;
-      }
-    }
-  }
-
-  &__reviews-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-
-    @include r($sm) {
-      margin-bottom: 18px;
-    }
-  }
-
-  &__reviews-user {
-    display: flex;
-    align-items: center;
-  }
-
-  &__reviews-avatar {
-    margin-right: 24px;
-  }
-
-  &__reviews-login {
-    font-weight: bold;
-    line-height: 19px;
-    color: $title;
-    margin-bottom: 4px;
-  }
-
-  &__reviews-date {
-    display: block;
-    font-size: 14px;
-    line-height: 24px;
-    color: #4f4f4f;
-  }
-
-  &__grade {
-    margin-bottom: 15px;
-    display: flex;
-
-    @include r($sm){
-      margin-bottom: 18px;
-    }
-  }
-
-  &__grade-lable {
-    display: block;
-    margin-left: 22px;
-  }
-
-  &__grade-input {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    padding-left: 22px;
-
-    &:checked + .product-tabs__grade-star {
-      fill: #ffb800;
-    }
-  }
-
-  &__grade-star {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    fill: $silver-600;
-    cursor: pointer;
-    margin-left: -22px;
-
-    &:not(:last-child) {
-      margin-right: 6px;
-    }
-  }
-
-  &__form-inner {
-    display: flex;
-    margin-bottom: 24px;
-
-    @include r($sm) {
-      flex-direction: column;
-      margin-bottom: 18px;
-    }
-  }
-
-  &__form-lable {
-    font-size: 16px;
-    line-height: 1.3;
-    color: $title;
-    display: block;
-
-    &--input {
-      width: 260px;
-      &:not(:last-child) {
-        margin-bottom: 24px;
-      }
-    }
-
-    &--textarea {
-      max-width: 400px;
-      width: 100%;
-      margin-right: 30px;
-    }
-
-    &--checkbox {
-      width: auto;
-      margin-right: 18px;
-    }
-
-    @include r($md) {
-      &--textarea {
-        margin-right: 10px;
-      }
-    }
-
-    @include r($sm){
-      &:not(:last-child){
-        margin-bottom: 18px;
-      }
-    
-      &--input {
-        width: 100%;
-      }
-
-      &--textarea {
-        max-width: 100%;
-        margin-right: 0;
-      }
-    }
-  }
-
-  &__form-textarea,
-  &__form-input {
-    border: 1px solid $silver-600;
-    box-sizing: border-box;
-    border-radius: 3px;
-    display: block;
-    margin-top: 12px;
-    padding: 18px;
-    transition: box-shadow 0.5s;
-    width: 100%;
-
-    &::placeholder {
-      font-size: 14px;
-      line-height: 1.3;
-      color: $silver-600;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px $green-200;
-      border-radius: 3px;
-    }
-  }
-
-  &__form-textarea {
-    height: 165px;
-    resize: none;
-  }
-
-  &__form-input {
-    height: 54px;
-  }
-
-  &__lable {
-    line-height: 1.3;
-    margin: 0 0 24px 36px;
-    display: block;
-    padding-right: 25px;
-  }
-
-  &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    padding-left: 36px;
-
-    &:checked + .product-tabs__checkbox {
-      background-image: url("../../../images/icon/tick.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      border-color: $default;
-    }
-  }
-
-  &__checkbox {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background-color: $silver-100;
-    border: 1px solid $silver-600;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: -36px;
-    transition: border-color 0.5s;
-
-    &:hover {
-      border-color: #505050;
+      padding: 14px 0;
     }
   }
 }
 
-.counter {
-  width: 160px;
-  position: relative;
 
-  .jq-number__field input {
-    width: 100%;
-    height: 44px;
-    padding: 10px 0;
-    font-size: 20px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-align: center;
-    border: none;
-    color: $default;
-    background-color: $green-200;
-  }
 
-  .jq-number {
-    padding: 0 44px;
-    border-radius: 3px;
-    width: 100%;
-    height: 44px;
-  }
-
-  .jq-number__spin {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    top: 0;
-    width: 44px;
-    background: $green-900;
-    cursor: pointer;
-
-    &::after {
-      @include pseudo;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 30px;
-      height: 2px;
-      background-color: $white;
-      margin: auto;
-      border-radius: 3px;
-    }
-  }
-
-  .jq-number__spin.plus {
-    right: 0;
-    border-radius: 0 3px 3px 0;
-
-    &::before {
-      @include pseudo;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 2px;
-      height: 30px;
-      background-color: #fff;
-      margin: auto;
-      border-radius: 3px;
-    }
-  }
-
-  .jq-number__spin.minus {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-}
-
-.slider-card {
-  margin-bottom: 46px;
-
-  @include r($sm) {
-    margin-bottom: 36px;
-  }
-
-  &__title {
-    font-family: "Ruda";
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $black;
-    margin-bottom: 60px;
-
-    @include r($md) {
-      margin-bottom: 45px;
-    }
-
-    @include r($sm) {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 7px;
-  }
-
-  &__item-inner {
-    margin-right: 30px;
-
-    @include r($lg) {
-      margin-right: 10px;
-    }
-
-    @include r($sm) {
-      margin-right: 5px;
-    }
-  }
-
-  &__link {
-    margin: -4px 0 0;
-  }
-
-  &__arrows {
-    position: absolute;
-    top: -106px;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    border: 1px solid $silver-600;
-    border-radius: 6px;
-    background-color: rgba($white, 0.8);
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &--prev {
-      right: 90px;
-    }
-  }
-
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 18px;
-
-    li {
-      &:not(:last-child) {
-        margin-right: 12px;
-      }
-
-      &.slick-active {
-        button {
-          background-color: $green-900;
-        }
-      }
-
-      button {
-        border: 1px solid $silver-600;
-        font-size: 0;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: $white;
-      }
-    }
-  }
-
-  &__num {
-    @include r($sm) {
-      font-size: 10px;
-      padding-right: 14px;
-
-      &::after {
-        width: 12px;
-        height: 12px;
-      }
-    }
-  }
-
-  &__status {
-    font-size: 8px;
-  }
-}

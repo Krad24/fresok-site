@@ -1,0 +1,70 @@
+.counter {
+  width: 160px;
+  position: relative;
+
+  .jq-number__field input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 0;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    border: none;
+    color: $default;
+    background-color: $green-200;
+  }
+
+  .jq-number {
+    padding: 0 44px;
+    border-radius: 3px;
+    width: 100%;
+    height: 44px;
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    top: 0;
+    width: 44px;
+    background: $green-900;
+    cursor: pointer;
+
+    &::after {
+      @include pseudo;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      background-color: $white;
+      margin: auto;
+      border-radius: 3px;
+    }
+  }
+
+  .jq-number__spin.plus {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 2px;
+      height: 30px;
+      background-color: #fff;
+      margin: auto;
+      border-radius: 3px;
+    }
+  }
+
+  .jq-number__spin.minus {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+}

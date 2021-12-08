@@ -52,6 +52,14 @@ $(function () {
     nextArrow: '<button type="button" class="product-page__arrows product-page__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
     infinite: false,
     autoplay: true,
+
+    responsive: [{
+      breakpoint: 993,
+      settings: {
+        arrows: false,
+      }
+    },
+    ]
   });
 
   $('.slider-card__items').slick({
@@ -106,6 +114,15 @@ $(function () {
     readOnly: true,
     spacing: "6px",
   });
+
+  // $('.product-tabs__star').rateYo({
+  //   starWidth: "16px",
+  //   "starSvg": '<svg class="product-tabs__star-img"><use xlink:href="../images/sprite.svg#star"></use></svg>',
+  //   normalFill: "rgba(193,193,193,0.3)",
+  //   ratedFill: "#FFB800",
+  //   fullStar: true,
+  //   spacing: "6px",
+  // });
 
   //burger
 
