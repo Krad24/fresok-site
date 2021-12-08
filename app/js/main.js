@@ -15,7 +15,7 @@ $(function () {
         arrows: false,
         autoplay: true,
       }
-    }, ]
+    },]
   });
 
   $('.slider-brands').slick({
@@ -25,25 +25,25 @@ $(function () {
     autoplay: true,
 
     responsive: [{
-        breakpoint: 993,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
 
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
 
-      {
-        breakpoint: 577,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
+    {
+      breakpoint: 577,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
     ]
   });
 
@@ -62,11 +62,25 @@ $(function () {
     autoplay: true,
 
     responsive: [{
-        breakpoint: 1290,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: true,
+      }
+    },
+
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: true,
+      }
+    },
+
     ]
   });
 
@@ -129,14 +143,14 @@ $(function () {
 
   if ($(window).width() < 576) {
     $(".header__form-input").attr("placeholder", "Я ищу...");
-  } else(
+  } else (
     $(".header__form-input").attr("placeholder", "Найти в магазине ...")
   );
 
   window.addEventListener("resize", function () {
     if ($(window).width() < 576) {
       $(".header__form-input").attr("placeholder", "Я ищу...");
-    } else(
+    } else (
       $(".header__form-input").attr("placeholder", "Найти в магазине ...")
     );
   });

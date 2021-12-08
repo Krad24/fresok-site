@@ -18,6 +18,10 @@
     padding: 63px 0;
     border-radius: 4px;
     position: relative;
+
+    @include r($xl) {
+      max-width: 430px;
+    }
   }
 
   &__arrows {
@@ -28,12 +32,12 @@
     width: 44px;
     height: 44px;
 
-    img{
+    img {
       width: 19px;
       height: 32px;
       margin: 0 auto;
     }
-    
+
     &--prev {
       left: 30px;
     }
@@ -41,10 +45,19 @@
     &--next {
       right: 30px;
     }
+
+    @include r($xl) {
+      &--prev {
+        left: 10px;
+      }
+
+      &--next {
+        right: 10px;
+      }
+    }
   }
 
   &__img {
-    
     margin: 0 auto;
   }
 
@@ -61,6 +74,10 @@
     letter-spacing: 0.03em;
     color: $title;
     margin-bottom: 64px;
+
+    @include r($lg) {
+      font-size: 26px;
+    }
   }
 
   &__badges {
@@ -203,10 +220,9 @@
     &:active {
       box-shadow: none;
       text-decoration-line: underline;
-      color: #4D800C;
+      color: #4d800c;
     }
   }
-
 }
 
 .product-tabs {
@@ -214,12 +230,21 @@
   margin: 0 auto;
   padding-bottom: 72px;
 
+  @include r($sm) {
+    padding-bottom: 48px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
     align-items: center;
     margin-bottom: 48px;
+
+    @include r($sm) {
+      padding: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -251,6 +276,16 @@
 
     &:hover {
       color: $green-900;
+    }
+
+    @include r($md) {
+      padding: 16px 0 8px;
+      font-size: 16px;
+    }
+
+    @include r($sm) {
+      padding: 17px 0 10px;
+      font-size: 14px;
     }
   }
 
@@ -298,10 +333,22 @@
     text-transform: uppercase;
     color: $title;
     margin-bottom: 48px;
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   &__reviews {
     margin-bottom: 72px;
+
+    @include r($md){
+      margin-bottom: 48px;
+    }
+
+    @include r($sm){
+      margin-bottom: 30px;
+    }
   }
 
   &__reviews-item {
@@ -318,6 +365,13 @@
         background-color: $silver-600;
       }
     }
+
+    @include r($sm) {
+      &:not(:last-child) {
+        padding-bottom: 18px;
+        margin-bottom: 28px;
+      }
+    }
   }
 
   &__reviews-info {
@@ -325,6 +379,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
+
+    @include r($sm) {
+      margin-bottom: 18px;
+    }
   }
 
   &__reviews-user {
@@ -354,6 +412,9 @@
     margin-bottom: 15px;
     display: flex;
 
+    @include r($sm){
+      margin-bottom: 18px;
+    }
   }
 
   &__grade-lable {
@@ -369,8 +430,8 @@
     clip: rect(0 0 0 0);
     padding-left: 22px;
 
-    &:checked+.product-tabs__grade-star {
-      fill: #FFB800;
+    &:checked + .product-tabs__grade-star {
+      fill: #ffb800;
     }
   }
 
@@ -390,8 +451,12 @@
   &__form-inner {
     display: flex;
     margin-bottom: 24px;
-  }
 
+    @include r($sm) {
+      flex-direction: column;
+      margin-bottom: 18px;
+    }
+  }
 
   &__form-lable {
     font-size: 16px;
@@ -415,6 +480,27 @@
     &--checkbox {
       width: auto;
       margin-right: 18px;
+    }
+
+    @include r($md) {
+      &--textarea {
+        margin-right: 10px;
+      }
+    }
+
+    @include r($sm){
+      &:not(:last-child){
+        margin-bottom: 18px;
+      }
+    
+      &--input {
+        width: 100%;
+      }
+
+      &--textarea {
+        max-width: 100%;
+        margin-right: 0;
+      }
     }
   }
 
@@ -465,7 +551,7 @@
     clip: rect(0 0 0 0);
     padding-left: 36px;
 
-    &:checked+.product-tabs__checkbox {
+    &:checked + .product-tabs__checkbox {
       background-image: url("../../../images/icon/tick.svg");
       background-position: center;
       background-repeat: no-repeat;
@@ -564,8 +650,12 @@
 .slider-card {
   margin-bottom: 46px;
 
+  @include r($sm) {
+    margin-bottom: 36px;
+  }
+
   &__title {
-    font-family: 'Ruda';
+    font-family: "Ruda";
     font-weight: 600;
     font-size: 30px;
     line-height: 1.2;
@@ -573,12 +663,34 @@
     text-transform: uppercase;
     color: $black;
     margin-bottom: 60px;
+
+    @include r($md) {
+      margin-bottom: 45px;
+    }
+
+    @include r($sm) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 7px;
+  }
+
+  &__item-inner {
+    margin-right: 30px;
+
+    @include r($lg) {
+      margin-right: 10px;
+    }
+
+    @include r($sm) {
+      margin-right: 5px;
+    }
   }
 
   &__link {
@@ -604,4 +716,47 @@
     }
   }
 
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $green-900;
+        }
+      }
+
+      button {
+        border: 1px solid $silver-600;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__num {
+    @include r($sm) {
+      font-size: 10px;
+      padding-right: 14px;
+
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__status {
+    font-size: 8px;
+  }
 }
