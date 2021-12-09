@@ -30,6 +30,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
+
+    @include r($sm){
+      margin: -16px 0 0 0;
+      padding: 9px 0;
+      background-color: rgba($white, 0.5);
+      position: relative;
+    }
   }
 
   &__item-inner {
@@ -72,10 +79,11 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 18px;
+    bottom: -30px;
+    left: 0;
+    right: 0;
 
     li {
-      height: 0;
       &:not(:last-child) {
         margin-right: 12px; 
       }
@@ -110,5 +118,6 @@
 
   &__status {
     font-size: 8px;
+    position: relative;
   }
 }
