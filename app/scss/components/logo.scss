@@ -1,4 +1,9 @@
 .logo {
   display: block;
   flex-shrink: 1;
+
+  &__img {
+    width: 200px;
+    height: 60px;
+  }
 }

@@ -22,7 +22,7 @@
   }
 
   &__close {
-    top: 39px;
+    top: 32px;
     right: 18px;
   }
 
@@ -39,12 +39,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
-    fill: $green-900;
-    width: 200px;
-    height: 60px;
   }
 
   &__authorization {
@@ -82,12 +76,22 @@
   &__catalog {
     display: block;
     width: 100%;
+    position: relative;
+    background-color: $white;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $green-200;
+      border-radius: 6px 6px 0 0;
+    }
   }
 
   &__btn {
-    color: $dark-800;
+    width: 100%;
+    color: #31352b;
     font-size: 18px;
     line-height: 1;
+    justify-content: flex-start;
 
     &::before {
       display: none;
@@ -96,6 +100,15 @@
 
   &__catalog-icon {
     fill: $dark-800;
+  }
+
+  &__catalog-list {
+    height: 100vh;
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__contacts {

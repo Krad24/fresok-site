@@ -2,9 +2,28 @@
     position: absolute;
     right: 24px;
     top: 18px;
-    padding: 22px;
-    background-image: url("../../images/icon/close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 18px 18px;
+    padding: 12px 13px;
+    transition: background-color 0.5s, fill 0.5s, box-shadow 0.4s;
+
+    &:hover {
+        background-color: $green-100;
+        border-radius: 3px;
+        fill: $green-900;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px $silver-100;
+        border-radius: 3px;
+    }
+
+    &:active {
+        box-shadow: none;
+        background-color: rgba($silver-600, 0.3);
+        border-radius: 3px;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+    }
 }

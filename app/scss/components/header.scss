@@ -298,6 +298,21 @@
     margin-left: 15px;
   }
 
+  &__user-btn {
+    &--search {
+      display: none;
+    }
+
+    @include r($sm) {
+      width: 44px;
+      height: 44px;
+
+      &--search {
+        display: block;
+      }
+    }
+  }
+
   &__user-search {
     width: 24px;
     height: 24px;
@@ -305,6 +320,7 @@
 
     @include r($sm) {
       display: block;
+      margin: 0 auto;
     }
   }
 
@@ -330,7 +346,6 @@
 
   &__catalog,
   &__user-item:first-child,
-  &__sr,
   &__contacts:last-child {
     @include r($lg) {
       display: none;
@@ -358,6 +373,12 @@
         margin-right: 0;
       }
     }
+
+    @include r($sm) {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
   }
 
   &__user-heart {
@@ -371,10 +392,14 @@
     }
   }
 
-  &__num {
-    @include r($sm) {
-      display: none;
+  &__user-btn {
+
+    &--heart {
+      @include r($sm) {
+        display: none;
+      }
     }
+
   }
 
   &__form-input {

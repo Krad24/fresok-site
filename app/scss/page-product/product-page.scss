@@ -286,7 +286,84 @@
       padding: 14px 0;
     }
   }
+
+  //модальное окно
+  &__slider-big {
+    max-width: 87vw;
+    padding: 60px 0 162px;
+    display: none;
+
+    .carousel__button.is-close {
+      top: 38px;
+      right: 38px;
+      border-radius: 3px;
+      color: rgba($black, 0.15);
+      width: 44px;
+      height: 44px;
+      transition: background-color 0.5s, fill 0.5s, box-shadow 0.4s;
+
+      &:hover {
+        background-color: $green-100;
+        border-radius: 3px;
+        fill: $green-900;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px $silver-100;
+        border-radius: 3px;
+      }
+
+      &:active {
+        box-shadow: none;
+        background-color: rgba($silver-600, 0.3);
+        border-radius: 3px;
+      }
+
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+      outline: transparent;
+
+      li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid $silver-600;
+
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+
+        &.slick-active {
+          background-color: $green-900;
+        }
+
+        button {
+          color: transparent;
+          font-size: 0;
+          padding: 5px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__slider-arrows {
+    background-color: none;
+
+    &--prev {
+      left: 60px;
+    }
+
+    &--next {
+      right: 60px;
+    }
+  }
 }
-
-
-

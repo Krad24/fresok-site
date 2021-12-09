@@ -125,8 +125,8 @@
         <div class="header__bottom-inner">
           <a class="header__logo logo " href="#">
             <picture>
-              <source class="header__symbol" srcset="images/icon/logo-symbol.svg"  media="(max-width: 768px)">
-              <img class="logo__img header__logo-img" src="images/icon/icon-svg/logo.svg" alt="логотип" width="200"
+              <source srcset="images/icon/icon-svg/logo.svg"  media="(min-width: 768px)">
+              <img class="logo__img header__logo-img" src="images/icon/logo-symbol.svg" alt="логотип" width="200"
                 height="60">
             </picture>
           </a>
@@ -194,19 +194,22 @@
               </button>
             </li>
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link" type="button">
+              <button class="user-nav__link header__user-btn header__user-btn--search" type="button">
                 <svg class="user-nav__icon header__user-search">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg>
+                <span class="sr-only">поиск</span>
+              </button>
+              <button class="user-nav__link header__user-btn header__user-btn--heart" type="button">
                 <svg class="user-nav__icon icon-heart header__user-heart">
                   <use xlink:href="images/sprite.svg#heart"></use>
                 </svg>
-                <span class="sr-only header__sr">иконка сердце</span>
-                <span class="user-nav__num header__num">12</span>
+                <span class="sr-only">иконка сердце</span>
+                <span class="user-nav__num header__user-num">12</span>
               </button>
             </li>
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link" type="button">
+              <button class="user-nav__link header__user-btn" type="button">
                 <svg class="user-nav__icon icon-cart header__user-cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
@@ -222,12 +225,13 @@
   <div class="burger__items">
     <div class="burger__top">
       <a class="logo" href="#">
-        <svg class="burger__logo">
-          <use xlink:href="images/sprite.svg#logo"></use>
-        </svg>
-        <span class="sr-only header__sr">логотип</span>
+        <img class="logo__img" src="../../images/icon/logo-burger.svg" alt="логотип" width="200"
+                height="60">
       </a>
       <button class="burger__close btn-close" type="button">
+        <svg class="btn-close__icon">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
         <span class="sr-only">закрыть меню</span>
       </button>
     </div>
@@ -243,14 +247,14 @@
         <span class="burger__auth">Регистрация</span>
       </div>
     </div>
-    <div class="header__catalog burger__catalog">
+    <div class="burger__catalog">
       <button class="header__btn burger__btn" type="button">
         <svg class="header__icon burger__catalog-icon">
           <use xlink:href="images/sprite.svg#catalog-burger"></use>
         </svg>
         Каталог товаров
       </button>
-      <ul class="header__catalog-list">
+      <ul class="header__catalog-list burger__catalog-list">
         <li class="header__catalog-item">
           <a class="header__catalog-link" href="#">Овощи и фрукты</a>
         </li>
