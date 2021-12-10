@@ -69,6 +69,10 @@
         border-top: 1px solid rgba($white, 0.1);
       }
     }
+
+    @include r($lg) {
+      padding-top: 18px;
+    }
   }
 
   &__desc {
@@ -117,7 +121,7 @@
 
   &__btn {
     position: absolute;
-    right: 0;
+    right: -2px;
     top: 0;
     bottom: 0;
     font-weight: 700;
@@ -149,7 +153,7 @@
     @include r($sm) {
       column-count: 2;
       column-gap: 30px;
-      padding: 20px 0;
+      padding: 3px 0;
     }
   }
 
@@ -186,6 +190,10 @@
 
     @include r($md) {
       flex-direction: column;
+    }
+
+    @include r($sm) {
+      padding-bottom: 16px;
     }
   }
 

@@ -134,13 +134,22 @@
 
   &__logo {
     margin-right: 24px;
+    display: block;
 
     @include r($xl) {
       margin-right: 15px;
     }
 
-    @include r($lg) {
-      padding: 2px 4px;
+    @include r($md) {
+      padding: 2px 3px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__logo-img {
+    @include r($md) {
+      width: 38px;
+      height: 40px;
     }
   }
 
@@ -289,6 +298,21 @@
     margin-left: 15px;
   }
 
+  &__user-btn {
+    &--search {
+      display: none;
+    }
+
+    @include r($sm) {
+      width: 44px;
+      height: 44px;
+
+      &--search {
+        display: block;
+      }
+    }
+  }
+
   &__user-search {
     width: 24px;
     height: 24px;
@@ -296,6 +320,7 @@
 
     @include r($sm) {
       display: block;
+      margin: 0 auto;
     }
   }
 
@@ -321,7 +346,6 @@
 
   &__catalog,
   &__user-item:first-child,
-  &__sr,
   &__contacts:last-child {
     @include r($lg) {
       display: none;
@@ -349,6 +373,12 @@
         margin-right: 0;
       }
     }
+
+    @include r($sm) {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
   }
 
   &__user-heart {
@@ -362,10 +392,14 @@
     }
   }
 
-  &__num{
-    @include r($sm) {
-      display: none;
+  &__user-btn {
+
+    &--heart {
+      @include r($sm) {
+        display: none;
+      }
     }
+
   }
 
   &__form-input {

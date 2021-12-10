@@ -1,0 +1,123 @@
+.slider-card {
+  margin-bottom: 46px;
+
+  @include r($sm) {
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    font-family: "Ruda";
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 60px;
+
+    @include r($md) {
+      margin-bottom: 45px;
+    }
+
+    @include r($sm) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+
+    @include r($sm){
+      margin: -16px 0 0 0;
+      padding: 9px 0;
+      background-color: rgba($white, 0.5);
+      position: relative;
+    }
+  }
+
+  &__item-inner {
+    margin-right: 30px;
+
+    @include r($lg) {
+      margin-right: 10px;
+    }
+
+    @include r($sm) {
+      margin-right: 5px;
+    }
+  }
+
+  &__link {
+    margin: -4px 0 0;
+  }
+
+  &__arrows {
+    position: absolute;
+    top: -106px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    background-color: rgba($white, 0.8);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--prev {
+      right: 90px;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid $silver-600;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      &.slick-active {
+        background-color: $green-900;
+      }
+
+      button {
+        font-size: 0;
+        padding: 5px;
+      }
+    }
+  }
+
+  &__num {
+    @include r($sm) {
+      font-size: 10px;
+      padding-right: 14px;
+
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__status {
+    font-size: 8px;
+    position: relative;
+  }
+}

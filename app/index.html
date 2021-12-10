@@ -125,8 +125,8 @@
         <div class="header__bottom-inner">
           <a class="header__logo logo " href="#">
             <picture>
-              <source srcset="images/icon/logo-symbol.svg" media="(max-width: 768px)">
-              <img class="logo__img header__logo-img" src="images/icon/icon-svg/logo.svg" alt="логотип" width="200"
+              <source srcset="images/icon/icon-svg/logo.svg"  media="(min-width: 768px)">
+              <img class="logo__img header__logo-img" src="images/icon/logo-symbol.svg" alt="логотип" width="200"
                 height="60">
             </picture>
           </a>
@@ -186,7 +186,7 @@
           </form>
           <ul class="user-nav header__user-nav">
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link">
+              <button class="user-nav__link" type="button">
                 <svg class="user-nav__icon icon-login">
                   <use xlink:href="images/sprite.svg#user-login"></use>
                 </svg>
@@ -194,19 +194,22 @@
               </button>
             </li>
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link">
+              <button class="user-nav__link header__user-btn header__user-btn--search" type="button">
                 <svg class="user-nav__icon header__user-search">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg>
+                <span class="sr-only">поиск</span>
+              </button>
+              <button class="user-nav__link header__user-btn header__user-btn--heart" type="button">
                 <svg class="user-nav__icon icon-heart header__user-heart">
                   <use xlink:href="images/sprite.svg#heart"></use>
                 </svg>
-                <span class="sr-only header__sr">иконка сердце</span>
-                <span class="user-nav__num header__num">12</span>
+                <span class="sr-only">иконка сердце</span>
+                <span class="user-nav__num header__user-num">12</span>
               </button>
             </li>
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link">
+              <button class="user-nav__link header__user-btn" type="button">
                 <svg class="user-nav__icon icon-cart header__user-cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
@@ -222,34 +225,36 @@
   <div class="burger__items">
     <div class="burger__top">
       <a class="logo" href="#">
-        <svg class="burger__logo">
-          <use xlink:href="images/sprite.svg#logo"></use>
-        </svg>
-        <span class="sr-only header__sr">логотип</span>
+        <img class="logo__img" src="../../images/icon/logo-burger.svg" alt="логотип" width="200"
+                height="60">
       </a>
       <button class="burger__close btn-close" type="button">
-        <span class="sr-only">кнопка для закрытия меню</span>
+        <svg class="btn-close__icon">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+        <span class="sr-only">закрыть меню</span>
       </button>
     </div>
     <div class="burger__authorization">
       <div class="burger__inner">
-        <button class="user-nav__link burger__icon">
+        <button class="user-nav__link burger__icon" type="button">
           <svg class="icon-login">
             <use xlink:href="images/sprite.svg#user-login"></use>
           </svg>
+          <span class="sr-only">вход и регистрация</span>
         </button>
         <span class="burger__auth">Вход</span>
         <span class="burger__auth">Регистрация</span>
       </div>
     </div>
-    <div class="header__catalog burger__catalog">
+    <div class="burger__catalog">
       <button class="header__btn burger__btn" type="button">
         <svg class="header__icon burger__catalog-icon">
           <use xlink:href="images/sprite.svg#catalog-burger"></use>
         </svg>
         Каталог товаров
       </button>
-      <ul class="header__catalog-list">
+      <ul class="header__catalog-list burger__catalog-list">
         <li class="header__catalog-item">
           <a class="header__catalog-link" href="#">Овощи и фрукты</a>
         </li>
@@ -475,7 +480,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/pineapple.png" alt="ананас" width="298"
@@ -493,7 +498,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -505,7 +510,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/lemon.png" alt="лемон" width="298" height="215">
@@ -520,7 +525,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -535,7 +540,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/dragon-fruit.png" alt="питахайя" width="298"
@@ -553,7 +558,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -565,7 +570,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/ketchup.png" alt="кетчут" width="298"
@@ -583,7 +588,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -598,7 +603,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/carrot.png" alt="морковка" width="298"
@@ -616,7 +621,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -631,7 +636,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/juice.png" alt="сок" width="298" height="215">
@@ -651,7 +656,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -666,7 +671,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/coffee.png" alt="кофе" width="298" height="215">
@@ -683,7 +688,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -698,7 +703,7 @@
             <svg class="icon-heart products-card__icon products-card__icon--heart">
               <use xlink:href="images/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">понравившиеся товары</span>
+            <span class="sr-only">добавить в избранное</span>
           </button>
           <a class="products-card__link" href="#" target="_blank">
             <img class="products-card__img" src="images/products-cards/paprik.png" alt="перец" width="298" height="215">
@@ -713,7 +718,7 @@
                 <svg class="icon-cart products-card__icon products-card__icon--cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
-                <span class="sr-only">Добавление в корзину</span>
+                <span class="sr-only">добавить в корзину</span>
               </button>
             </div>
           </div>
@@ -798,7 +803,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Ананас, 1 кг</h3>
-            <span class="status__in status stoks__status">В
+            <span class="status--in status stoks__status">В
               наличии</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
@@ -827,7 +832,7 @@
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Кофе с коноплей органический Caffé
               Salomoni 250г</h3>
-            <span class="status__few status stoks__status">заканчивается</span>
+            <span class="status--few status stoks__status">заканчивается</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
                 <span class="products-card__item products-card__item--old stoks__old">877
@@ -854,7 +859,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Клубника, 1 кг</h3>
-            <span class="status__out status stoks__status">нет
+            <span class="status--out status stoks__status">нет
               в
               наличии</span>
             <div class="products-card__bottom">
@@ -883,7 +888,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Манго, 1 шт</h3>
-            <span class="status__in status stoks__status">В
+            <span class="status--in status stoks__status">В
               наличии</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
@@ -911,7 +916,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Лосось, 1 кг</h3>
-            <span class="status__in status stoks__status">В
+            <span class="status--in status stoks__status">В
               наличии</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
@@ -939,7 +944,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Сок Granini овощной 100%, 0.5л</h3>
-            <span class="status__few status stoks__status">заканчивается</span>
+            <span class="status--few status stoks__status">заканчивается</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
                 <span class="products-card__item products-card__item--old stoks__old">230
@@ -966,7 +971,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Фруктовая корзина, 1 шт</h3>
-            <span class="stoks__status status__in status">В
+            <span class="stoks__status status--in status">В
               наличии</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
@@ -994,7 +999,7 @@
           </a>
           <div class="products-card__info">
             <h3 class="products-card__desc stoks__desc">Свинина мякоть, 1 кг</h3>
-            <span class="status__in status stoks__status">В
+            <span class="status--in status stoks__status">В
               наличии</span>
             <div class="products-card__bottom">
               <div class="products-card__price stoks__price">
@@ -1221,7 +1226,7 @@
       </div>
     </div>
   </div>
-</footer>-->
+</footer>
 
 </div>
 <script src="js/main.min.js"></script>

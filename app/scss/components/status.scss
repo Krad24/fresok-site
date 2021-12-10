@@ -6,15 +6,15 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  &__in {
+  &--in {
     color: $green-900;
   }
 
-  &__few {
+  &--few {
     color: $red-900;
   }
 
-  &__out {
+  &--out {
     color: $silver-600;
   }
 }

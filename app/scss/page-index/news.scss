@@ -160,20 +160,21 @@
     transition: color 0.5s;
     font-weight: 600;
     padding: 18px;
-    @include line-clamps (16, 1.5, 5);
+    @include line-clamps(16, 1.5, 5);
 
     @include r($sm) {
       padding: 15px;
-      @include line-clamps (14, 1.4, 5);
+      @include line-clamps(14, 1.4, 5);
     }
   }
 
   &__img {
     @include r($md) {
+      border-radius: 6px 6px 0 0;
       width: 100%;
-    object-fit: cover;
+      object-fit: cover;
     }
-    
+
     @include r($sm) {
       height: 200px;
     }
