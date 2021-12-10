@@ -288,14 +288,22 @@
   }
 
   //модальное окно
-  &__slider-big {
-    max-width: 87vw;
+  &__slider-list {
     padding: 60px 0 162px;
-    display: none;
+    max-width: 1728px;
+    width: 100%;
+
+    @include r($md) {
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .carousel__button.is-close {
-      top: 38px;
-      right: 38px;
+      top: 32px;
+      right: 32px;
       border-radius: 3px;
       color: rgba($black, 0.15);
       width: 44px;
@@ -319,6 +327,10 @@
         border-radius: 3px;
       }
 
+      @include r($sm) {
+        top: 20px;
+        right: 20px;
+      }
     }
 
     .slick-dots {
@@ -326,7 +338,7 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      bottom: -60px;
+      bottom: 92px;
       left: 0;
       right: 0;
       outline: transparent;
@@ -346,24 +358,56 @@
         }
 
         button {
+          outline: transparent;
           color: transparent;
           font-size: 0;
           padding: 5px;
           border: none;
         }
       }
+
+      @include r($sm) {
+        bottom: 114px;
+      }
     }
   }
 
   &__slider-arrows {
-    background-color: none;
-
     &--prev {
       left: 60px;
     }
 
     &--next {
       right: 60px;
+    }
+
+    @include r($md) {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+    }
+  }
+
+  &__slider-img {
+    margin: 0 auto;
+
+    @include r($lg) {
+      width: 500px;
+      height: 500px;
+    }
+
+    @include r($sm) {
+      width: 360px;
+      height: 360px;
     }
   }
 }

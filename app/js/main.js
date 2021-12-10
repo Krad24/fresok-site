@@ -64,9 +64,7 @@ $(function () {
   $('.product-page__slider-list').slick({
     prevArrow: '<button type="button" class="product-page__slider-arrows product-page__slider-arrows--prev product-page__arrows product-page__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
     nextArrow: '<button type="button" class="product-page__slider-arrows product-page__slider-arrows--next product-page__arrows product-page__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
-    autoplay: true,
     dots: true,
-    infinite: false,
   });
 
   $('.slider-card__items').slick({
