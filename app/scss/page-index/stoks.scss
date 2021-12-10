@@ -1,6 +1,6 @@
 .stoks {
   background-color: $silver-100;
-
+  
   &__cards {
     @include r($lg) {
       grid-template-columns: repeat(2, 1fr);
@@ -22,6 +22,7 @@
     max-width: 300px;
     padding: 12px;
     background-color: $white;
+    flex-direction: row;
 
     @include r($lg) {
       max-width: 100%;
@@ -68,6 +69,11 @@
   }
 
   &__bottom {
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
     flex-direction: column;
   }
 
