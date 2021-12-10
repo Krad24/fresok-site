@@ -1,6 +1,6 @@
 .stoks {
   background-color: $silver-100;
-  
+
   &__cards {
     @include r($lg) {
       grid-template-columns: repeat(2, 1fr);
