@@ -17,6 +17,7 @@
     max-width: 100%;
     padding: 0;
     border: none;
+    flex-direction: row;
 
     @include r($lg) {
       display: block;
@@ -288,7 +289,7 @@
   }
 
   //модальное окно
-  &__slider-list {
+  &__slider-modal {
     padding: 60px 0 162px;
     max-width: 1728px;
     width: 100%;
@@ -330,44 +331,6 @@
       @include r($sm) {
         top: 20px;
         right: 20px;
-      }
-    }
-
-    .slick-dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      bottom: 92px;
-      left: 0;
-      right: 0;
-      outline: transparent;
-
-      li {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 1px solid $silver-600;
-
-        &:not(:last-child) {
-          margin-right: 12px;
-        }
-
-        &.slick-active {
-          background-color: $green-900;
-        }
-
-        button {
-          outline: transparent;
-          color: transparent;
-          font-size: 0;
-          padding: 5px;
-          border: none;
-        }
-      }
-
-      @include r($sm) {
-        bottom: 114px;
       }
     }
   }

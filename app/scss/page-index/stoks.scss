@@ -24,7 +24,7 @@
     background-color: $white;
     flex-direction: row;
 
-    @include r($lg) {
+    @include r($xl) {
       max-width: 100%;
     }
 
@@ -44,8 +44,8 @@
 
   &__link {
     display: block;
-    float: left;
     margin: 0 12px 0 0;
+    flex-shrink: 1;
 
     &::after,
     &::before {
@@ -69,12 +69,19 @@
   }
 
   &__bottom {
-    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    flex-shrink: 1;
+
+    @include r($xl) {
+      flex-shrink: 3;
+    }
   }
 
   &__desc {
@@ -140,6 +147,7 @@
   }
 
   &__status {
+    margin-top: auto;
     margin-bottom: 8px;
 
     @include r($md) {

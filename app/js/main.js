@@ -47,19 +47,27 @@ $(function () {
     ]
   });
 
-  $('.product-page__slider-top').slick({
-    prevArrow: '<button type="button" class="product-page__arrows product-page__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
-    nextArrow: '<button type="button" class="product-page__arrows product-page__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
-    autoplay: true,
-
-    responsive: [{
-      breakpoint: 993,
-      settings: {
-        arrows: false,
-      }
+  const swiper = new Swiper(".product-page__slider-top", {
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-    ]
   });
+
+  const swiperModal = new Swiper(".product-page__slider-modal", {
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
 
   $('.product-page__slider-list').slick({
     prevArrow: '<button type="button" class="product-page__slider-arrows product-page__slider-arrows--prev product-page__arrows product-page__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
