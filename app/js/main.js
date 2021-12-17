@@ -54,17 +54,23 @@ $(function () {
       delay: 2500,
       disableOnInteraction: false,
     },
+    navigation: {
+      nextEl: ".product-page__arrows--next",
+      prevEl: ".product-page__arrows--prev",
+    },
   });
 
   const swiperModal = new Swiper(".product-page__slider-modal", {
     centeredSlides: true,
+    loop: true,
     pagination: {
       el: ".swiper-pagination",
+      type: 'bullets',
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".product-page__modal-arrows--next",
+      prevEl: ".product-page__modal-arrows--prev",
     },
   });
 
