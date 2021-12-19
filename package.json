@@ -28,6 +28,7 @@
     "mixitup": "^3.3.1",
     "rateyo": "^2.3.2",
     "sass": "^1.43.4",
+    "simplebar": "^5.3.6",
     "slick-carousel": "^1.8.1",
     "swiper": "^7.2.0"
   }

@@ -48,7 +48,6 @@ $(function () {
   });
 
   const swiper = new Swiper(".product-page__slider-top", {
-    centeredSlides: true,
     loop: true,
     autoplay: {
       delay: 2500,
@@ -61,7 +60,6 @@ $(function () {
   });
 
   const swiperModal = new Swiper(".product-page__slider-modal", {
-    centeredSlides: true,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
@@ -74,14 +72,8 @@ $(function () {
     },
   });
 
-
-  $('.product-page__slider-list').slick({
-    prevArrow: '<button type="button" class="product-page__slider-arrows product-page__slider-arrows--prev product-page__arrows product-page__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
-    nextArrow: '<button type="button" class="product-page__slider-arrows product-page__slider-arrows--next product-page__arrows product-page__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
-    dots: true,
-  });
-
   $('.slider-card__items').slick({
+    
     prevArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
     nextArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
     slidesToShow: 4,
@@ -157,14 +149,21 @@ $(function () {
   //close burger and catalog-filters
 
   $('body').on('click', function (e) {
-    console.log(e);
-    if (e.target.className == 'body lock' || e.target.className == 'btn-close' ||
-      e.target.className == 'burger__close btn-close') {
+    // console.log(e);
+    if (e.target.className == 'body lock') {
       $('.burger').removeClass('burger--active');
       $('.catalog__items').removeClass('catalog__items--active');
       $('body').removeClass('lock');
     }
   });
+
+  let element = document.getElementsByClassName('btn-close');
+
+  $(element).on('click' , function(){
+    $('.burger').removeClass('burger--active');
+    $('.catalog__items').removeClass('catalog__items--active');
+    $('body').removeClass('lock');
+  })
 
   //form in header
 

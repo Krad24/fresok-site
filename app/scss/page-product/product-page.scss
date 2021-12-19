@@ -1,6 +1,6 @@
 .product-page {
   &__inner {
-    padding: 48px 0 64px;
+    padding: 48px 0 70px;
     border-bottom: 1px solid $silver-600;
 
     @include r($md) {
@@ -38,9 +38,13 @@
     }
 
     @include r($lg) {
-      padding: 16px 37px;
+      padding: 40px 0;
       margin: 0 0 76px 0;
       max-width: 100%;
+    }
+
+    @include r($sm){
+      padding: 20px 0;
     }
   }
 
@@ -74,16 +78,32 @@
         right: 10px;
       }
     }
+
+    @include r($sm) {
+      display: none;
+    }
   }
 
   &__modal-arrows {
+    @include r($sm) {
+      background-color: rgba($white, 0.8);
+      border-radius: 6px;
+    }
     &--prev {
       left: 60px;
+
+      @include r($sm) {
+        left: 0;
+      }
     }
 
     &--next {
       right: 60px;
       transform: rotate(-180deg) translateY(50%);
+
+      @include r($sm) {
+        right: 0;
+      }
     }
   }
 
@@ -93,8 +113,6 @@
   }
 
   &__modal-dots {
-    bottom: 92px;
-
     .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
@@ -199,7 +217,7 @@
     margin-bottom: 60px;
 
     @include r($sm) {
-      margin-bottom: 30px;
+      margin-bottom: 27px;
     }
   }
 
@@ -238,6 +256,7 @@
 
     @include r($md) {
       border: none;
+      margin-bottom: 0;
     }
 
     @include r($sm) {
@@ -325,12 +344,26 @@
     max-width: 1728px;
     width: 100%;
 
+    .swiper-pagination {
+      bottom: 92px;
+
+      @include r($sm) {
+        bottom: 114px;
+      }
+
+      .swiper-pagination-bullet {
+        margin: 0 6px;
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+    }
+
     @include r($md) {
       padding: 0;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .carousel__button.is-close {
@@ -404,4 +437,12 @@
       height: 360px;
     }
   }
+}
+
+.fancybox__backdrop {
+  background-color: rgba($black, 0.15);
+}
+
+.fancybox__slide {
+  padding: 0;
 }

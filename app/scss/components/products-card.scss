@@ -97,6 +97,10 @@
         }
       }
     }
+
+    @include r($sm){
+      top: 3px;
+    }
   }
 
   &__icon {
@@ -123,6 +127,7 @@
     margin-bottom: 20px;
     display: block;
     position: relative;
+    flex-shrink: 1;
 
     @include r($sm) {
       margin-bottom: 12px;
@@ -134,7 +139,7 @@
 
     @include r($sm) {
       width: 150px;
-      height: 110px;
+      height: 120px;
       margin: 0 auto;
     }
   }
