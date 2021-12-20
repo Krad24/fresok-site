@@ -157,6 +157,7 @@
   }
 
   &__bottom {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -191,6 +192,44 @@
       margin-left: 5px;
     }
   }
+
+  &__form {
+    position: absolute;
+    right: 56px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__counter {
+    width: 84px;
+  }
+
+  &__input{
+    .jq-number__field input {
+      height: 24px;
+      font-size: 16px;
+    }
+
+    &.jq-number {
+      padding: 0px 24px;
+      height: 24px;
+    }
+
+    .jq-number__spin {
+      width: 24px;
+
+      &::after {
+        width: 16px;
+      }
+    }
+
+    .jq-number__spin.plus::before {
+      height: 16px;
+    }
+  }
+  
 
   &__cart {
     padding: 7px;

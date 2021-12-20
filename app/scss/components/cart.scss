@@ -1,16 +1,27 @@
 .cart {
+  display: none;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   max-width: 475px;
-  position: relative;
+  width: 100%;
+  background-color: $white;
+  z-index: 60;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__header {
     padding: 19px 24px 12px;
   }
 
   &__close {
+    top: 24px;
+    right: 16px;
     padding: 9px 10px;
   }
 
@@ -46,6 +57,12 @@
     padding: 12px;
   }
 
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
   &__card {
     max-width: 100%;
     flex-direction: row;
@@ -53,12 +70,61 @@
     justify-content: space-between;
   }
 
+  &__card-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 6px;
+    fill: $silver-600;
+    transition: background-color 0.5s, fill 0.5s, box-shadow 0.4s;
+
+    &:hover {
+      background-color: $green-100;
+      border-radius: 3px;
+      fill: $green-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:active {
+      box-shadow: none;
+      fill: $silver-600;
+      background-color: rgba($silver-600, 0.3);
+      border-radius: 3px;
+    }
+  }
+
+  &__card-icon {
+    width: 12px;
+    height: 12px;
+  }
+
   &__inner {
     display: flex;
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__desc {
+    margin-bottom: 5px;
+    max-width: 170px;
+    @include line-clamps(14px, 1.4, 2);
+  }
+
   &__link {
-    margin-right: 32px;
+    margin: 0 32px 0 0;
+
+    &::before,
+    &::after {
+      opacity: 0;
+    }
   }
 
   &__img {
@@ -69,7 +135,7 @@
 
   &__total {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__counter {
@@ -107,6 +173,14 @@
     }
   }
 
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $default;
+  }
+
   &__sum {
     display: flex;
     justify-content: space-between;
@@ -127,6 +201,7 @@
   }
 
   &__buy {
+    display: block;
     width: 100%;
     padding: 22px 10px;
     text-align: center;

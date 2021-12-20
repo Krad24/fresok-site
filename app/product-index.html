@@ -18,7 +18,7 @@
 
     <div class="cart">
       <div class="cart__header">
-        <span class="cart__title cart__header-title">корзина</span>
+        <span class="cart__title cart__header-title">Корзина</span>
         <button class="cart__clear" type="button">очистить корзину</button>
         <button class="cart__close btn-close" type="button">
           <svg class="btn-close__icon cart__icon">
@@ -30,8 +30,8 @@
       <ul class="cart__list">
         <li class="cart__item">
           <article class="products-card cart__card">
-            <button class="cart__card-close btn-close" type="button">
-              <svg class="btn-close__icon cart__card-icon">
+            <button class="cart__card-close" type="button">
+              <svg class="cart__card-icon">
                 <use xlink:href="images/sprite.svg#close"></use>
               </svg>
               <span class="sr-only">закрыть корзину</span>
@@ -56,24 +56,53 @@
                 </lable>
               </form>
               <div class="products-card__price cart__price">
-                999<span>₽</span>
+                1998<span>₽</span>
               </div>
             </div>
           </article>
         </li>
         <li class="cart__item">
-
+          <article class="products-card cart__card">
+            <button class="cart__card-close" type="button">
+              <svg class="cart__card-icon">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg>
+              <span class="sr-only">закрыть корзину</span>
+            </button>
+            <div class="cart__inner">
+              <a class="products-card__link cart__link" href="#" target="_blank">
+                <img class="products-card__img cart__img" src="images/products-cards/dragon-fruit.png" alt="Питахайя"
+                  width="60" height="60">
+              </a>
+              <div class="cart__info">
+                <h3 class="products-card__desc cart__desc">Питахайя красная с белой мякотью, 1шт</h3>
+                <div class="products-card__price cart__price">
+                  1019<span>₽</span>
+                </div>
+              </div>
+            </div>
+            <div class="cart__total">
+              <form class="cart__form" action="#">
+                <lable class="counter cart__counter">
+                  <input class="counter__input cart__input" type="number" value="1" min="1" max="99">
+                  <span class="sr-only">количество выбранного товара</span>
+                </lable>
+              </form>
+              <div class="products-card__price cart__price">
+                2038<span>₽</span>
+              </div>
+            </div>
+          </article>
         </li>
       </ul>
       <div class="cart__bottom">
         <div class="cart__sum">
-          <span class="cart__title">товаров на сумму</span>
+          <span class="cart__title">Товаров на сумму</span>
           <span class="cart__result">2038<span>₽</span></span>
         </div>
-        <button class="cart__buy" type="button">оформить заказ</button>
+        <a class="cart__buy" href="#" target="_blank">Оформить заказ</a>
       </div>
     </div>
-
 
     <div class="header__top">
       <div class="container">
@@ -194,7 +223,7 @@
               </button>
             </li>
             <li class="user-nav__item header__user-item">
-              <button class="user-nav__link header__user-btn" type="button">
+              <button class="user-nav__link header__user-btn header__user-btn--cart" type="button">
                 <svg class="user-nav__icon icon-cart header__user-cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>

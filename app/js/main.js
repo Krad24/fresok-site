@@ -99,7 +99,6 @@ $(function () {
         dots: true,
       }
     },
-
     ]
   });
 
@@ -146,13 +145,20 @@ $(function () {
     $('body').addClass('lock');
   });
 
+  //header-cart 
+
+  $('.header__user-btn--cart').on('click', function () {
+    $('.cart').addClass('cart--active');
+    $('body').addClass('lock');
+  });
+
   //close burger and catalog-filters
 
   $('body').on('click', function (e) {
-    // console.log(e);
     if (e.target.className == 'body lock') {
       $('.burger').removeClass('burger--active');
       $('.catalog__items').removeClass('catalog__items--active');
+      $('.cart').removeClass('cart--active');
       $('body').removeClass('lock');
     }
   });
@@ -162,6 +168,7 @@ $(function () {
   $(element).on('click' , function(){
     $('.burger').removeClass('burger--active');
     $('.catalog__items').removeClass('catalog__items--active');
+    $('.cart').removeClass('cart--active');
     $('body').removeClass('lock');
   })
 

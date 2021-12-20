@@ -7,7 +7,7 @@ body {
   color: $default;
   background-color: $white;
 
-  @include r($xl) {
+  
     &.lock {
       overflow-y: hidden;
       position: relative;
@@ -22,7 +22,7 @@ body {
         z-index: 55;
       }
     }
-  }
+  
 }
 
 .wrapper {
