@@ -98,7 +98,7 @@
       }
     }
 
-    @include r($sm){
+    @include r($sm) {
       top: 3px;
     }
   }
@@ -152,7 +152,7 @@
     @include line-clamps(14, 1.4, 3);
 
     @include r($sm) {
-      margin-bottom: 48px;
+      margin-bottom: 12px;
     }
   }
 
@@ -162,6 +162,10 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-top: auto;
+
+    @include r($sm) {
+      padding-top: 36px;
+    }
   }
 
   &__price {
@@ -200,13 +204,20 @@
     bottom: 0;
     display: flex;
     align-items: center;
+
+    @include r($sm) {
+      right: 0;
+      left: 0;
+      bottom: auto;
+      justify-content: center;
+    }
   }
 
   &__counter {
     width: 84px;
   }
 
-  &__input{
+  &__input {
     .jq-number__field input {
       height: 24px;
       font-size: 16px;
@@ -229,7 +240,6 @@
       height: 16px;
     }
   }
-  
 
   &__cart {
     padding: 7px;

@@ -1,4 +1,4 @@
-<section class="breadcrumbs">
+<div class="breadcrumbs">
   <div class="container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
@@ -12,12 +12,11 @@
       </li>
     </ul>
   </div>
-</section>
+</div>
 
 <section class="product-page">
   <div class="product-page__inner">
     <div class="container">
-      <h2 class="sr-only">Карточка с описанием товара</h2>
       <article class="products-card product-page__card">
 
         <div class="swiper product-page__slider-top">
@@ -82,7 +81,7 @@
         </div>
 
         <div class="product-page__content">
-          <h3 class="product-page__desc">Питахайя красная с белой мякотью</h3>
+          <h2 class="product-page__desc">Питахайя красная с белой мякотью</h2>
           <div class="product-page__top">
             <div class="badges product-page__badges">
               <span class="badges__item badges__item--hit product-page__badges-item">хит</span>
@@ -182,48 +181,48 @@
             <p><span>Срок хранения:</span>до 5 дней.</p>
         </li>
         <li class="product-tabs__content-item" id="tab-3">
-          <h3 class="product-tabs__title">мнение наших клиентов</h3>
+          <h4 class="product-tabs__title">мнение наших клиентов</h4>
           <ul class="product-tabs__reviews">
             <li class="product-tabs__reviews-item">
-              <div class="product-tabs__reviews-info">
-                <div class="product-tabs__reviews-user">
-                  <img class="product-tabs__reviews-avatar" src="../images/avatar/avatar.jpg" alt="автар" width="70"
-                    height="70">
-                  <div class="product-tabs__reviews-box">
-                    <a class="product-tabs__reviews-login" href="#">Андрей</a>
-                    <span class="product-tabs__reviews-date">10.06.2021</span>
+              <article class="product-tabs__reviews-comment">
+                <div class="product-tabs__reviews-info">
+                  <div class="product-tabs__reviews-user">
+                    <img class="product-tabs__reviews-avatar" src="../images/avatar/avatar.jpg" alt="автар" width="70"
+                      height="70">
+                    <div class="product-tabs__reviews-box">
+                      <a class="product-tabs__reviews-login" href="#">Андрей</a>
+                      <time class="product-tabs__reviews-date">10.06.2021</time>
+                    </div>
                   </div>
+                  <div class="star-rating" data-rateyo-rating="4"></div>
                 </div>
-                <div class="star-rating" data-rateyo-rating="4"></div>
-              </div>
-              <div class="product-tabs__text">
-                <p>
+                <blockquote class="product-tabs__text">
                   Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
-                </p>
-              </div>
+                </blockquote>
+              </article>
             </li>
             <li class="product-tabs__reviews-item">
-              <div class="product-tabs__reviews-info">
-                <div class="product-tabs__reviews-user">
-                  <img class="product-tabs__reviews-avatar" src="../images/avatar/avatar.jpg" alt="автар" width="70"
-                    height="70">
-                  <div class="product-tabs__reviews-box">
-                    <a class="product-tabs__reviews-login" href="#">Екатерина Белая</a>
-                    <span class="product-tabs__reviews-date">7.06.2021</span>
+              <article class="product-tabs__reviews-comment">
+                <div class="product-tabs__reviews-info">
+                  <div class="product-tabs__reviews-user">
+                    <img class="product-tabs__reviews-avatar" src="../images/avatar/avatar.jpg" alt="автар" width="70"
+                      height="70">
+                    <div class="product-tabs__reviews-box">
+                      <a class="product-tabs__reviews-login" href="#">Екатерина Белая</a>
+                      <time class="product-tabs__reviews-date">7.06.2021</time>
+                    </div>
                   </div>
+                  <div class="star-rating" data-rateyo-rating="4"></div>
                 </div>
-                <div class="star-rating" data-rateyo-rating="4"></div>
-              </div>
-              <div class="product-tabs__text">
-                <p>
+                <blockquote class="product-tabs__text">
                   Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
                   Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
                   экзотические фрукты.
-                </p>
-              </div>
+                </blockquote>
+              </article>
             </li>
           </ul>
-          <h3 class="product-tabs__title">оставить отзыв</h3>
+          <h4 class="product-tabs__title">оставить отзыв</h4>
           <form class="product-tabs__form" action="#">
             <div class="product-tabs__grade">
               <span class="product-tabs__form-lable product-tabs__form-lable--checkbox">Ваша оценка *</span>
@@ -232,16 +231,16 @@
             <div class="product-tabs__form-inner">
               <label class="product-tabs__form-lable product-tabs__form-lable--textarea">
                 Ваш отзыв *
-                <textarea class="product-tabs__form-textarea" placeholder="Введите текст отзыва"></textarea>
+                <textarea class="product-tabs__form-textarea" placeholder="Введите текст отзыва" required name="tabs-textarea"></textarea>
               </label>
               <div class="product-tabs__form-box">
                 <label class="product-tabs__form-lable product-tabs__form-lable--input">
                   Имя
-                  <input class="product-tabs__form-input" type="text" placeholder="Введите ваше имя">
+                  <input class="product-tabs__form-input" type="text" placeholder="Введите ваше имя" required name="tabs-input">
                 </label>
                 <label class="product-tabs__form-lable product-tabs__form-lable--input">
                   Email *
-                  <input class="product-tabs__form-input" type="email" placeholder="youremail@mail.com">
+                  <input class="product-tabs__form-input" type="email" placeholder="youremail@mail.com" required name="tabs-input">
                 </label>
               </div>
             </div>
@@ -250,7 +249,7 @@
               <span class="product-tabs__checkbox"></span>
               Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
             </label>
-            <button class="button" type="button">Оставить отзыв</button>
+            <button class="button" type="submit">Оставить отзыв</button>
           </form>
         </li>
       </ul>
@@ -283,9 +282,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Морковь молодая с бабушкиной грядки, 1кг
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item">
@@ -296,7 +295,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>
@@ -326,9 +325,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольннный
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item products-card__item--old">
@@ -342,7 +341,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>
@@ -372,9 +371,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Кофе с коноплей органический Caffé Salomoni 250г
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item">
@@ -385,7 +384,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>
@@ -415,9 +414,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Кофе с коноплей органический Caffé Salomoni 250г
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item">
@@ -428,7 +427,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>
@@ -458,9 +457,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Морковь молодая с бабушкиной грядки, 1кг
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item">
@@ -471,7 +470,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>
@@ -501,9 +500,9 @@
                   <span class="rating__num slider-card__num">4.5</span>
                 </div>
               </div>
-              <h3 class="products-card__desc">
+              <h4 class="products-card__desc">
                 Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольннный
-              </h3>
+              </h4>
               <div class="products-card__bottom">
                 <div class="products-card__price">
                   <span class="products-card__item products-card__item--old">
@@ -517,7 +516,7 @@
                   <svg class="icon-cart products-card__icon products-card__icon--cart">
                     <use xlink:href="images/sprite.svg#cart"></use>
                   </svg>
-                  <span class="sr-only">добавить в корзинуу</span>
+                  <span class="sr-only">добавить в корзину</span>
                 </button>
               </div>
             </article>

@@ -1,7 +1,18 @@
 .stoks {
+  text-align: center;
   background-color: $silver-100;
 
   &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    text-align: left;
+    margin-bottom: 41px;
+
+    @include r($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include r($lg) {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
@@ -24,6 +35,15 @@
     background-color: $white;
     flex-direction: row;
 
+    &:hover {
+      .stoks__link {
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+    }
+
     @include r($xl) {
       max-width: 100%;
     }
@@ -45,11 +65,10 @@
   &__link {
     display: block;
     margin: 0 12px 0 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
 
-    &::after,
-    &::before {
-      display: none;
+    @include r($xxl) {
+      flex-shrink: 1;
     }
   }
 
@@ -71,6 +90,10 @@
   &__bottom {
     margin-top: 0;
     width: 100%;
+
+    @include r($sm) {
+      padding-top: 0;
+    }
   }
 
   &__info {
@@ -148,7 +171,6 @@
 
     @include r($sm) {
       font-size: 14px;
-
     }
   }
 
