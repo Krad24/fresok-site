@@ -9,6 +9,10 @@
   top: 0;
   right: 0;
 
+  @include r($sm){
+    height: auto;
+  }
+
   &--active {
     display: flex;
     flex-direction: column;
