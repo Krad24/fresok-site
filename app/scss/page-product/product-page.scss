@@ -86,9 +86,14 @@
 
   &__modal-arrows {
     @include r($sm) {
+      display: block;
       background-color: rgba($white, 0.8);
       border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     &--prev {
       left: 60px;
 
@@ -395,31 +400,6 @@
       @include r($sm) {
         top: 20px;
         right: 20px;
-      }
-    }
-  }
-
-  &__slider-arrows {
-    &--prev {
-      left: 60px;
-    }
-
-    &--next {
-      right: 60px;
-    }
-
-    @include r($md) {
-      width: 60px;
-      height: 60px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 6px;
-
-      &--prev {
-        left: 0;
-      }
-
-      &--next {
-        right: 0;
       }
     }
   }

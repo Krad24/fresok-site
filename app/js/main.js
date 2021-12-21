@@ -15,7 +15,7 @@ $(function () {
         arrows: false,
         autoplay: true,
       }
-    },]
+    }, ]
   });
 
   $('.slider-brands').slick({
@@ -25,25 +25,25 @@ $(function () {
     autoplay: true,
 
     responsive: [{
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 4,
-      }
-    },
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
 
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
 
-    {
-      breakpoint: 577,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
     ]
   });
 
@@ -73,7 +73,7 @@ $(function () {
   });
 
   $('.slider-card__items').slick({
-    
+
     prevArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--prev"><img src="../images/icon/arrow-left.svg" alt="стрелка назад"></button>',
     nextArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--next"><img src="../images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
     slidesToShow: 4,
@@ -81,24 +81,24 @@ $(function () {
     autoplay: true,
 
     responsive: [{
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        arrows: false,
-        dots: true,
-      }
-    },
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
 
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: false,
-        dots: true,
-      }
-    },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
     ]
   });
 
@@ -165,7 +165,7 @@ $(function () {
 
   let element = document.getElementsByClassName('btn-close');
 
-  $(element).on('click' , function(){
+  $(element).on('click', function () {
     $('.burger').removeClass('burger--active');
     $('.catalog__items').removeClass('catalog__items--active');
     $('.cart').removeClass('cart--active');
@@ -182,14 +182,14 @@ $(function () {
 
   if ($(window).width() < 576) {
     $(".header__form-input").attr("placeholder", "Я ищу...");
-  } else (
+  } else(
     $(".header__form-input").attr("placeholder", "Найти в магазине ...")
   );
 
   window.addEventListener("resize", function () {
     if ($(window).width() < 576) {
       $(".header__form-input").attr("placeholder", "Я ищу...");
-    } else (
+    } else(
       $(".header__form-input").attr("placeholder", "Найти в магазине ...")
     );
   });
@@ -283,6 +283,21 @@ $(function () {
     elem[i].style.width = 'auto';
   }
 
+  //catalog card убираем баг с сортировкой
+
+  window.addEventListener("resize", function () {
+    if ($(window).width() < 992) {
+      $('.catalog__cards').removeClass('cards-horizontally');
+      $('.catalog__btn').removeClass('catalog__btn--active');
+      $('.btn-vertically').addClass('catalog__btn--active');
+    }
+  });
+
+  //srcoll cart 
+
+  new SimpleBar(document.getElementById('cartList'), {
+    autoHide: false,
+  });
 
   //filter-mix
 

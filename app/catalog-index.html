@@ -26,7 +26,7 @@
           <span class="sr-only">закрыть корзину</span>
         </button>
       </div>
-      <ul class="cart__list">
+      <ul class="cart__list" id="cartList">
         <li class="cart__item">
           <article class="products-card cart__card">
             <button class="cart__card-close" type="button">
@@ -197,7 +197,7 @@
             <button class="form-search__btn header__form-btn" type="submit" name="search-btn">поиск</button>
           </form>
           <ul class="user-nav header__user-nav">
-            <li class="user-nav__item header__user-item">
+            <li class="user-nav__item header__user-item header__user-item--login">
               <button class="user-nav__link" type="button">
                 <svg class="user-nav__icon icon-login">
                   <use xlink:href="images/sprite.svg#user-login"></use>
@@ -205,13 +205,15 @@
                 <span class="sr-only">иконка регистрации/авторизации</span>
               </button>
             </li>
-            <li class="user-nav__item header__user-item">
+            <li class="user-nav__item header__user-item header__user-item--search">
               <button class="user-nav__link header__user-btn header__user-btn--search" type="button">
                 <svg class="user-nav__icon header__user-search">
                   <use xlink:href="images/sprite.svg#search"></use>
                 </svg>
                 <span class="sr-only">поиск</span>
               </button>
+            </li>
+            <li class="user-nav__item header__user-item header__user-item--heart">
               <button class="user-nav__link header__user-btn header__user-btn--heart" type="button">
                 <svg class="user-nav__icon icon-heart header__user-heart">
                   <use xlink:href="images/sprite.svg#heart"></use>
@@ -220,7 +222,7 @@
                 <span class="user-nav__num header__user-num">12</span>
               </button>
             </li>
-            <li class="user-nav__item header__user-item">
+            <li class="user-nav__item header__user-item header__user-item--cart">
               <button class="user-nav__link header__user-btn header__user-btn--cart" type="button">
                 <svg class="user-nav__icon icon-cart header__user-cart">
                   <use xlink:href="images/sprite.svg#cart"></use>
