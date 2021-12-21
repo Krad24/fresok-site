@@ -1,5 +1,17 @@
 .top-products {
+  text-align: center;
+
   &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    text-align: left;
+    margin-bottom: 41px;
+
+    @include r($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include r($lg) {
       grid-gap: 10px;
     }
@@ -153,18 +165,33 @@
   }
 
   &__offer-link {
-    padding: 5px 0;
+    padding: 6px 0;
     font-weight: 600;
     line-height: 1;
-    border-bottom: 2px solid $default;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $default;
+    }
 
     &--big {
-      border-bottom-color: $white;
       text-shadow: 1px 1px 0 rgba($black, 0.25);
+
+      &::after {
+        background-color: $white;
+      }
     }
 
     @include r($md) {
       padding: 13px 0;
+
+      &::after {
+        bottom: 7px;
+      }
     }
 
     @include r($sm) {

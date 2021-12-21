@@ -12,12 +12,13 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 3px $silver-100;
+        box-shadow: 0 0 0 3px $green-200;
         border-radius: 3px;
     }
 
     &:active {
         box-shadow: none;
+        fill: $black;
         background-color: rgba($silver-600, 0.3);
         border-radius: 3px;
     }

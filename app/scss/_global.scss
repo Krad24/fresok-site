@@ -7,7 +7,7 @@ body {
   color: $default;
   background-color: $white;
 
-  @include r($xl) {
+  
     &.lock {
       overflow-y: hidden;
       position: relative;
@@ -22,7 +22,7 @@ body {
         z-index: 55;
       }
     }
-  }
+  
 }
 
 .wrapper {
@@ -114,24 +114,5 @@ body {
 
   &:hover {
     opacity: 0.5;
-  }
-}
-
-.top-products,
-.stoks {
-  text-align: center;
-
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px;
-    text-align: left;
-    margin-bottom: 41px;
-  }
-
-  @include r($xl) {
-    &__cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 }

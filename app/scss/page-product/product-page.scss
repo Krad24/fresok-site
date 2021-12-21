@@ -1,6 +1,6 @@
 .product-page {
   &__inner {
-    padding: 48px 0 64px;
+    padding: 48px 0 70px;
     border-bottom: 1px solid $silver-600;
 
     @include r($md) {
@@ -17,6 +17,7 @@
     max-width: 100%;
     padding: 0;
     border: none;
+    flex-direction: row;
 
     @include r($lg) {
       display: block;
@@ -37,9 +38,13 @@
     }
 
     @include r($lg) {
-      padding: 16px 37px;
+      padding: 40px 0;
       margin: 0 0 76px 0;
       max-width: 100%;
+    }
+
+    @include r($sm){
+      padding: 20px 0;
     }
   }
 
@@ -48,21 +53,20 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 44px;
-    height: 44px;
-
-    img {
-      width: 19px;
-      height: 32px;
-      margin: 0 auto;
-    }
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $default;
 
     &--prev {
-      left: 30px;
+      left: 22px;
     }
 
     &--next {
-      right: 30px;
+      right: 22px;
+      transform: rotate(-180deg) translateY(50%);
     }
 
     @include r($xl) {
@@ -73,6 +77,57 @@
       &--next {
         right: 10px;
       }
+    }
+
+    @include r($sm) {
+      display: none;
+    }
+  }
+
+  &__modal-arrows {
+    @include r($sm) {
+      display: block;
+      background-color: rgba($white, 0.8);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--prev {
+      left: 60px;
+
+      @include r($sm) {
+        left: 0;
+      }
+    }
+
+    &--next {
+      right: 60px;
+      transform: rotate(-180deg) translateY(50%);
+
+      @include r($sm) {
+        right: 0;
+      }
+    }
+  }
+
+  &__arrows-img {
+    width: 19px;
+    height: 32px;
+  }
+
+  &__modal-dots {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: rgba($black, 0.15);
+      border: 1px solid $silver-600;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $green-900;
+      border: 1px solid $green-900;
     }
   }
 
@@ -167,7 +222,7 @@
     margin-bottom: 60px;
 
     @include r($sm) {
-      margin-bottom: 30px;
+      margin-bottom: 27px;
     }
   }
 
@@ -206,6 +261,7 @@
 
     @include r($md) {
       border: none;
+      margin-bottom: 0;
     }
 
     @include r($sm) {
@@ -288,17 +344,31 @@
   }
 
   //модальное окно
-  &__slider-list {
+  &__slider-modal {
     padding: 60px 0 162px;
     max-width: 1728px;
     width: 100%;
 
+    .swiper-pagination {
+      bottom: 92px;
+
+      @include r($sm) {
+        bottom: 114px;
+      }
+
+      .swiper-pagination-bullet {
+        margin: 0 6px;
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+    }
+
     @include r($md) {
       padding: 0;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .carousel__button.is-close {
@@ -332,69 +402,6 @@
         right: 20px;
       }
     }
-
-    .slick-dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      bottom: 92px;
-      left: 0;
-      right: 0;
-      outline: transparent;
-
-      li {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 1px solid $silver-600;
-
-        &:not(:last-child) {
-          margin-right: 12px;
-        }
-
-        &.slick-active {
-          background-color: $green-900;
-        }
-
-        button {
-          outline: transparent;
-          color: transparent;
-          font-size: 0;
-          padding: 5px;
-          border: none;
-        }
-      }
-
-      @include r($sm) {
-        bottom: 114px;
-      }
-    }
-  }
-
-  &__slider-arrows {
-    &--prev {
-      left: 60px;
-    }
-
-    &--next {
-      right: 60px;
-    }
-
-    @include r($md) {
-      width: 60px;
-      height: 60px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 6px;
-
-      &--prev {
-        left: 0;
-      }
-
-      &--next {
-        right: 0;
-      }
-    }
   }
 
   &__slider-img {
@@ -410,4 +417,12 @@
       height: 360px;
     }
   }
+}
+
+.fancybox__backdrop {
+  background-color: rgba($black, 0.15);
+}
+
+.fancybox__slide {
+  padding: 0;
 }

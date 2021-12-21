@@ -9,6 +9,8 @@
 
 @import 'components/form-search.scss';
 
+@import 'components/counter.scss';
+
 @import 'components/logo.scss';
 
 @import 'components/user-nav.scss';
@@ -59,8 +61,6 @@
 
 @import 'components/pagination.scss';
 
-@import 'components/counter.scss';
-
 @import 'page-product/slider-card.scss';
 
 @import 'page-product/product-tabs.scss';
@@ -68,3 +68,5 @@
 @import 'page-catalog/catalog.scss';
 
 @import 'page-product/product-page.scss';
+
+@import 'components/cart.scss';

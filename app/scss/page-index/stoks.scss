@@ -1,7 +1,18 @@
 .stoks {
+  text-align: center;
   background-color: $silver-100;
 
   &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    text-align: left;
+    margin-bottom: 41px;
+
+    @include r($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @include r($lg) {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
@@ -22,8 +33,18 @@
     max-width: 300px;
     padding: 12px;
     background-color: $white;
+    flex-direction: row;
 
-    @include r($lg) {
+    &:hover {
+      .stoks__link {
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    @include r($xl) {
       max-width: 100%;
     }
 
@@ -37,18 +58,17 @@
     @include r($sm) {
       height: auto;
       max-width: 100%;
-      padding: 9px 12px;
+      padding: 9px;
     }
   }
 
   &__link {
     display: block;
-    float: left;
     margin: 0 12px 0 0;
+    flex-shrink: 0;
 
-    &::after,
-    &::before {
-      display: none;
+    @include r($xxl) {
+      flex-shrink: 1;
     }
   }
 
@@ -68,7 +88,23 @@
   }
 
   &__bottom {
+    margin-top: 0;
+    width: 100%;
+
+    @include r($sm) {
+      padding-top: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    flex-shrink: 1;
+
+    @include r($xl) {
+      flex-shrink: 3;
+    }
   }
 
   &__desc {
@@ -111,6 +147,10 @@
     margin: 0 0 0 12px;
     align-self: flex-end;
 
+    span {
+      margin-left: 0;
+    }
+
     @include r($md) {
       font-size: 20px;
     }
@@ -123,17 +163,19 @@
   &__value {
     font-size: 14px;
     align-self: flex-end;
+    margin-left: 0;
 
     @include r($md) {
       font-size: 18px;
     }
 
     @include r($sm) {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
   &__status {
+    margin-top: auto;
     margin-bottom: 8px;
 
     @include r($md) {

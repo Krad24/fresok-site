@@ -1,11 +1,14 @@
 .products-card {
   max-width: 300px;
   width: 100%;
+  height: 100%;
   padding: 57px 18px 17px;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   position: relative;
   transition: border-color 0.4s;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     border-color: $green-900;
@@ -94,6 +97,10 @@
         }
       }
     }
+
+    @include r($sm) {
+      top: 3px;
+    }
   }
 
   &__icon {
@@ -120,6 +127,7 @@
     margin-bottom: 20px;
     display: block;
     position: relative;
+    flex-shrink: 1;
 
     @include r($sm) {
       margin-bottom: 12px;
@@ -131,28 +139,33 @@
 
     @include r($sm) {
       width: 150px;
-      height: 110px;
+      height: 120px;
       margin: 0 auto;
     }
   }
 
   &__desc {
     font-weight: 600;
-    height: 60px;
     margin-bottom: 10px;
     letter-spacing: 0.03em;
     color: $title;
     @include line-clamps(14, 1.4, 3);
 
     @include r($sm) {
-      margin-bottom: 48px;
+      margin-bottom: 12px;
     }
   }
 
   &__bottom {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-top: auto;
+
+    @include r($sm) {
+      padding-top: 36px;
+    }
   }
 
   &__price {
@@ -184,6 +197,50 @@
     }
   }
 
+  &__form {
+    position: absolute;
+    right: 56px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    @include r($sm) {
+      right: 0;
+      left: 0;
+      bottom: auto;
+      justify-content: center;
+    }
+  }
+
+  &__counter {
+    width: 84px;
+  }
+
+  &__input {
+    .jq-number__field input {
+      height: 24px;
+      font-size: 16px;
+    }
+
+    &.jq-number {
+      padding: 0px 24px;
+      height: 24px;
+    }
+
+    .jq-number__spin {
+      width: 24px;
+
+      &::after {
+        width: 16px;
+      }
+    }
+
+    .jq-number__spin.plus::before {
+      height: 16px;
+    }
+  }
+
   &__cart {
     padding: 7px;
     display: flex;
@@ -202,6 +259,7 @@
     }
 
     @include r($md) {
+      margin-bottom: -7px;
       border: 7px solid $white;
     }
   }

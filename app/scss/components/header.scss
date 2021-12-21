@@ -345,7 +345,7 @@
   }
 
   &__catalog,
-  &__user-item:first-child,
+  &__user-item--login,
   &__contacts:last-child {
     @include r($lg) {
       display: none;
@@ -368,6 +368,11 @@
   }
 
   &__user-item {
+
+    &--search {
+      display: none;
+    }
+
     @include r($lg) {
       &:not(:last-child) {
         margin-right: 0;
@@ -377,6 +382,14 @@
     @include r($sm) {
       &:not(:last-child) {
         margin-right: 15px;
+      }
+
+      &--heart {
+        display: none;
+      }
+
+      &--search {
+        display: block;
       }
     }
   }
@@ -390,16 +403,6 @@
     @include r($sm) {
       display: none;
     }
-  }
-
-  &__user-btn {
-
-    &--heart {
-      @include r($sm) {
-        display: none;
-      }
-    }
-
   }
 
   &__form-input {
