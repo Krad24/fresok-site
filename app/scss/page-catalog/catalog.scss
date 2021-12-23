@@ -589,10 +589,13 @@
     border: 1px solid $silver-600;
     border-radius: 0 0 3px 3px;
     background-color: $white;
+    min-width: 100%;
+    max-width: 150%;
   }
 
   .jq-selectbox li {
     padding: 9px 8px;
+    @include line-clamp;
 
     &:hover {
       color: $green-900;
