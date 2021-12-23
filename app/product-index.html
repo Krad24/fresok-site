@@ -399,6 +399,7 @@
 </div>
 
 <section class="product-page">
+  <h1 class="sr-only">Страница с товаром</h1>
   <div class="product-page__inner">
     <div class="container">
       <article class="products-card product-page__card">
@@ -492,7 +493,7 @@
                 <input class="counter__input" type="number" value="1" min="1" max="99">
                 <span class="sr-only">количество выбранного товара</span>
               </lable>
-              <button class="products-card__cart button product-page__cart" type="button">
+              <button class="products-card__cart button product-page__cart" type="submit">
                 <svg class="icon-cart product-page__cart-icon">
                   <use xlink:href="images/sprite.svg#cart"></use>
                 </svg>
@@ -563,6 +564,7 @@
             <p><span>Другие названия:</span>Драконов фрукт, Глаз дракона;</p>
             <p><span>Страна происхождения:</span>Вьетнам;</p>
             <p><span>Срок хранения:</span>до 5 дней.</p>
+          </div>
         </li>
         <li class="product-tabs__content-item" id="item-comments">
           <h4 class="product-tabs__title">мнение наших клиентов</h4>
@@ -576,7 +578,7 @@
                       height="70">
                     <div class="product-tabs__reviews-box">
                       <a class="product-tabs__reviews-login" href="#">Андрей</a>
-                      <time class="product-tabs__reviews-date">10.06.2021</time>
+                      <time class="product-tabs__reviews-date" datetime="2021-06-10">10.06.2021</time>
                     </div>
                   </div>
                   <div class="star-rating" data-rateyo-rating="4"></div>
@@ -595,7 +597,7 @@
                       height="70">
                     <div class="product-tabs__reviews-box">
                       <a class="product-tabs__reviews-login" href="#">Екатерина Белая</a>
-                      <time class="product-tabs__reviews-date">7.06.2021</time>
+                      <time class="product-tabs__reviews-date" datetime="2021-06-07">7.06.2021</time>
                     </div>
                   </div>
                   <div class="star-rating" data-rateyo-rating="4"></div>
@@ -617,16 +619,19 @@
             <div class="product-tabs__form-inner">
               <label class="product-tabs__form-lable product-tabs__form-lable--textarea">
                 Ваш отзыв *
-                <textarea class="product-tabs__form-textarea" placeholder="Введите текст отзыва" required name="tabs-textarea"></textarea>
+                <textarea class="product-tabs__form-textarea" placeholder="Введите текст отзыва" required
+                  name="tabs-textarea"></textarea>
               </label>
               <div class="product-tabs__form-box">
                 <label class="product-tabs__form-lable product-tabs__form-lable--input">
                   Имя
-                  <input class="product-tabs__form-input" type="text" placeholder="Введите ваше имя" required name="tabs-input">
+                  <input class="product-tabs__form-input" type="text" placeholder="Введите ваше имя" required
+                    name="tabs-input">
                 </label>
                 <label class="product-tabs__form-lable product-tabs__form-lable--input">
                   Email *
-                  <input class="product-tabs__form-input" type="email" placeholder="youremail@mail.com" required name="tabs-input">
+                  <input class="product-tabs__form-input" type="email" placeholder="youremail@mail.com" required
+                    name="tabs-input">
                 </label>
               </div>
             </div>
@@ -910,7 +915,6 @@
         </li>
       </ul>
     </div>
-  </div>
   </div>
 </section>
   
