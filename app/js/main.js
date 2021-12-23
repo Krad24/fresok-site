@@ -110,13 +110,25 @@ $(function () {
 
   //tabs
 
-  $('.product-tabs__link').on('click', function (e) {
-    e.preventDefault();
-    $('.product-tabs__link').removeClass('product-tabs__link--active');
-    $(this).addClass('product-tabs__link--active');
-
+  $('#btn-decr').on('click', function(){
+    $('.product-tabs__btn').removeClass('product-tabs__btn--active');
+    $(this).addClass('product-tabs__btn--active');
     $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
-    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+    $('#item-decr').addClass('product-tabs__content-item--active');
+  })
+
+  $('#btn-feature').on('click', function(){
+    $('.product-tabs__btn').removeClass('product-tabs__btn--active');
+    $(this).addClass('product-tabs__btn--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $('#item-feature').addClass('product-tabs__content-item--active');
+  })
+
+  $('#btn-comments').on('click', function(){
+    $('.product-tabs__btn').removeClass('product-tabs__btn--active');
+    $(this).addClass('product-tabs__btn--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $('#item-comments').addClass('product-tabs__content-item--active');
   })
 
   //star-rating
