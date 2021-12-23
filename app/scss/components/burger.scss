@@ -24,6 +24,7 @@
   &__close {
     top: 32px;
     right: 18px;
+    z-index: 20;
   }
 
   &__items {
@@ -104,6 +105,9 @@
 
   &__catalog-list {
     height: 100vh;
+    background-color: $silver-100;
+    overflow: auto;
+    padding-bottom: 50px;
 
     &--active {
       opacity: 1;
