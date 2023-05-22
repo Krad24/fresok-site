@@ -106,7 +106,7 @@ function images(){
 } 
 
 function conWebp() {
-    return src('app/images/**/*.jpg')
+    return src('app/images/**/*.png')
     .pipe(newer('app/images/**/*.*'))
     .pipe(webp())
     .pipe(dest('app/images'))
