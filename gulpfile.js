@@ -10,6 +10,9 @@ const svgSprite = require('gulp-svg-sprite');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
 const fileInclude = require('gulp-file-include');
+const webp = require('gulp-webp');
+const webpHTML = require('gulp-webp-html')
+const newer = require('gulp-newer')
 
 const htmlInclude = () => {
     return src(['app/html/*.html'])
@@ -100,6 +103,13 @@ function images(){
         })
     ]))
     .pipe(dest('dist/images'))
+} 
+
+function conWebp() {
+    return src('app/images/**/*.jpg')
+    .pipe(newer('app/images/**/*.*'))
+    .pipe(webp())
+    .pipe(dest('app/images'))
 }
 
 function build(){
@@ -134,5 +144,6 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.conWebp = conWebp;
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, svgSprites, htmlInclude, browsersync, watching);
