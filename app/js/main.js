@@ -134,7 +134,7 @@ $(function () {
 
   $(".star-rating").rateYo({
     starWidth: "16px",
-    "starSvg": '<svg class="star-rating__img"><use xlink:href="../images/sprite.svg#star"></use></svg>',
+    "starSvg": '<svg class="star-rating__img"><use xlink:href="images/sprite.svg#star"></use></svg>',
     normalFill: "rgba(193,193,193,0.3)",
     ratedFill: "#FFB800",
     fullStar: true,
