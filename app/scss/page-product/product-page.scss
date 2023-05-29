@@ -365,6 +365,7 @@
     .swiper-slide {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     @include r($md) {
@@ -406,8 +407,6 @@
   }
 
   &__slider-img {
-    margin: 0 auto;
-
     @include r($lg) {
       width: 500px;
       height: 500px;
