@@ -4,6 +4,7 @@
 .vscode
 *.sublime*
 npm-debug.*
+*.md
 
 # dist/
 node_modules/
