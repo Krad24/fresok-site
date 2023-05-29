@@ -114,6 +114,7 @@ function build(){
     return src([
         'app/**/*.html',
         'app/css/style.min.css',
+        'app/images/**/*.*',
         'app/js/main.min.js',
         'app/fonts/*.*',
     ], {base: 'app'})
