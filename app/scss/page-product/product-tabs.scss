@@ -151,6 +151,7 @@
     margin-bottom: 24px;
 
     @include r($sm) {
+      display: block;
       margin-bottom: 18px;
     }
   }
@@ -158,10 +159,10 @@
   &__reviews-user {
     display: flex;
     align-items: center;
-  }
 
-  &__reviews-avatar {
-    margin-right: 24px;
+    @include r($sm) {
+      margin-bottom: 10px;
+    }
   }
 
   &__reviews-login {
@@ -169,6 +170,14 @@
     line-height: 19px;
     color: $title;
     margin-bottom: 4px;
+  }
+
+  &__reviews-box {
+    margin: 0 24px;
+
+    @include r($sm) {
+      margin: 0 0 0 24px;
+    }
   }
 
   &__reviews-date {

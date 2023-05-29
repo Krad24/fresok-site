@@ -11,14 +11,19 @@ const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
 const fileInclude = require('gulp-file-include');
 const webp = require('gulp-webp');
-const webpHTML = require('gulp-webp-html')
+const avif = require('gulp-avif');
 const newer = require('gulp-newer')
+const pictureHtml = require('gulp-webp-avif-html-nosvg-nogif-lazyload');
 
 const htmlInclude = () => {
     return src(['app/html/*.html'])
     .pipe(fileInclude ({
         prefix: '@',
         basepath: '@file',
+    }))
+    .pipe(pictureHtml({
+        primaryFormat: 'avif',
+        secondaryFormat: 'webp',
     }))
     .pipe(dest('app'))
     .pipe(browserSync.stream());
@@ -89,28 +94,21 @@ function scripts() {
 }
 
 
-function images(){
-    return src('app/images/**/*.*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest('dist/images'))
-} 
-
-function conWebp() {
-    return src('app/images/**/*.png')
-    .pipe(newer('app/images/**/*.*'))
-    .pipe(webp())
-    .pipe(dest('app/images'))
-}
+function images() {
+    return src(['app/images/**/*.*', '!app/images/**/*.svg', '!app/images/**/*.webp'])
+      .pipe(newer('app/images'))
+      .pipe(avif({ quality: 50 }))
+  
+      .pipe(src('app/images/**/*.*'))
+      .pipe(newer('app/images'))
+      .pipe(webp())
+  
+      .pipe(src('app/images/**/*.*', '!app/images/sprite.svg', '!app/images/icon/icon-svg/*.svg'))
+      .pipe(newer('app/images'))
+      .pipe(imagemin())
+  
+      .pipe(dest('app/images'))
+  } 
 
 function build(){
     return src([
@@ -130,6 +128,7 @@ function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
+    watch(['app/images/src'], images)
     watch(['app/images/icon/icon-svg/*.svg'], svgSprites);
     watch(['app/images/icon/icon-svg/*.svg']).on('change', browserSync.reload);
     watch(['app/html/**/*.html'], htmlInclude);
@@ -140,10 +139,10 @@ exports.htmlInclude = htmlInclude;
 exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.images = images;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.conWebp = conWebp;
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, svgSprites, htmlInclude, browsersync, watching);
+exports.default = parallel(styles, scripts, images, svgSprites, htmlInclude, browsersync, watching);
