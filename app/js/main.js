@@ -73,7 +73,6 @@ $(function () {
   });
 
   $('.slider-card__items').slick({
-
     prevArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--prev"><img src="images/icon/arrow-left.svg" alt="стрелка назад"></button>',
     nextArrow: '<button type="button" class="slider-card__arrows slider-card__arrows--next"><img src="images/icon/arrow-right.svg" alt="стрелка вперёд"></button>',
     slidesToShow: 4,
